@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.61 - Monodrone</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<hr />
+<blockquote>
+<h2 id="monodrone">Monodrone</h2>
+<p><em>Medium construct, lawful neutral</em> <strong><em> -
+<strong>Armor Class</strong> 15 (natural armor) - <strong>Hit
+Points</strong> 5 (1d8 + 1) - <strong>Speed</strong> 30 ft., fly 30 ft.
+</em></strong> |STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:| |10 (+0)|13 (+1)|12 (+1)|4 (-3)|10
+(+0)|5 (-3)| <strong><em> - <strong>Senses</strong> truesight 120 ft.,
+passive Perception 10 - <strong>Languages</strong> Modron -
+<strong>Challenge</strong> 1/8 (25 XP) - <strong>Proficiency
+Bonus</strong> +2 </em></strong> <strong><em>Axiomatic
+Mind.</em></strong> The monodrone can't be compelled to act in a manner
+contrary to its nature or its instructions.</p>
+<p><strong><em>Disintegration.</em></strong> If the monodrone dies, its
+body disintegrates into dust, leaving behind its weapons and anything
+else it was carrying.</p>
+<h3 id="actions">Actions</h3>
+<p><strong><em>Dagger.</em></strong> <em>Melee Weapon Attack:</em> +3 to
+hit, reach 5 ft., one target. <em>Hit:</em> 3 (1d4 + 1) piercing
+damage.</p>
+<p><strong><em>Javelin.</em></strong> <em>Melee or Ranged Weapon
+Attack:</em> +2 to hit, reach 5 ft. or range 30/120 ft., one target.
+<em>Hit:</em> 3 (1d6) piercing damage.</p>
+</blockquote>
+<h2 id="monodrone-1">Monodrone</h2>
+<p>A monodrone can perform one simple task at a time and can relay a
+single message of up to forty-eight words.</p>
+<p><strong><em>Modrons.</em></strong> Modrons are beings of absolute law
+that adhere to a hive-like hierarchy. They inhabit the plane of Mechanus
+and tend its eternally revolving gears, their existence a clockwork
+routine of perfect order.</p>
+<p><strong><em>Absolute Law and Order.</em></strong> Under the direction
+of their leader, Primus, modrons increase order in the multiverse in
+accordance with laws beyond the comprehension of mortal minds. Their own
+minds are networked in a hierarchal pyramid, in which each modron
+receives commands from superiors and delegates orders to underlings. A
+modron carries out commands with total obedience, utmost efficiency, and
+an absence of morality or ego. Modrons have no sense of self beyond what
+is necessary to fulfill their duties. They exist as a unified
+collective, divided by ranks, yet they always refer to themselves
+collectively. To a modron, there is no "I," but only "we" or "us."</p>
+<blockquote>
+<h5 id="variant-rogue-modrons">Variant: Rogue Modrons</h5>
+<p>A modron unit sometimes becomes defective, either through natural
+decay or exposure to chaotic forces. Rogue modrons don't act in
+accordance with Primus's wishes and directives, breaking laws,
+disobeying orders, and even engaging in violence. Other modrons hunt
+down such rogues.</p>
+<p>A rogue modron loses the Axiomatic Mind trait and can have any
+alignment other than lawful neutral. Otherwise, it has the same
+statistics as a regular modron of its rank.</p>
+</blockquote>
+<p><strong><em>Absolute Hierarchy.</em></strong> Modrons communicate
+only with their own rank and the ranks immediately above and below them.
+Modrons more than one rank away are either too advanced or too simple to
+understand.</p>
+<p><strong><em>Cogs of the Great Machine.</em></strong> If a modron is
+destroyed, its remains disintegrate. A replacement from the next lowest
+rank then transforms in a flash of light, gaining the physical form of
+its new rank. The promoted modron is replaced by one of its underlings
+in the same manner, all the way to the lowest levels of the hierarchy.
+There, a new modron is created by Primus, with a steady stream of
+monodrones leaving the Great Modron Cathedral on Mechanus as a
+result.</p>
+<p><strong><em>The Great Modron March.</em></strong> When the gears of
+Mechanus complete seventeen cycles once every 289 years, Primus sends a
+vast army of modrons across the Outer Planes, ostensibly on a
+reconnaissance mission. The march is long and dangerous, and only a
+small number of modrons returns to Mechanus.</p>
+</body>
+</html>

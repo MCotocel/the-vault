@@ -1,0 +1,136 @@
+{
+  "main": {
+    "id": "1ddfeea263b43902",
+    "type": "split",
+    "children": [
+      {
+        "id": "c68640a96cbca31d",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "60 - RPGs/60 - D&D 5E/60.60 - Bestiary/60.61 - Monster Manual/60.61 - Monster Manual.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "48fa6b3229903e9b",
+    "type": "split",
+    "children": [
+      {
+        "id": "46471338de8afeed",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c7a236fe156888c2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "c2a5ba78a9842e82",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f08cd386a1640a67",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e57a17f1fdc57832",
+    "type": "split",
+    "children": [
+      {
+        "id": "feca1530da6b1956",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b00f275370df0b5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "60 - RPGs/60 - D&D 5E/60.60 - Bestiary/60.61 - Monster Manual/60.61 - Monster Manual.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1e72815924c97cb2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "60 - RPGs/60 - D&D 5E/60.60 - Bestiary/60.61 - Monster Manual/60.61 - Monster Manual.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "046f5f616c2e1b56",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "5dc795b17c79c797",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "60 - RPGs/60 - D&D 5E/60.60 - Bestiary/60.61 - Monster Manual/60.61 - Monster Manual.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "c68640a96cbca31d",
+  "lastOpenFiles": [
+    "60 - RPGs/60 - D&D 5E/60.60 - Bestiary/60.61 - Monster Manual/60.61 - Aarakocra.md",
+    "60 - RPGs/60 - D&D 5E/60.60 - Bestiary/60.61 - Monster Manual/60.61 - Monster Manual.md"
+  ]
+}

@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.50 - 100 plot hooks</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<h1 id="plot-hooks">100 plot hooks</h1>
+<table>
+<colgroup>
+<col style="width: 0%" />
+<col style="width: 99%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>A farmer passing by tells of a nearby villages that have been struck
+with plague. If pressed, he passes a rumour of a travelling carnival
+that visited both places.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>The forest is on fire!</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>The nearest city gates are shut, with many soldiers stationed on the
+walls. All visitors are being turned away, but some locals pass along
+the story of rioting and murder.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>A tinker's wagon has gone into a ditch and broken a wheel. The
+tinker passes many rumours (all false) of the surrounding area. He
+offers his services at a great discount if the party helps him right his
+spilled wagon and goods. All his trinkets are cursed.</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>A corpse strewn meadow, a handful of broken glass weapons, and a
+crow that speaks.</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Some campers tell tale of a nearby cavern that has "some amazing
+waterfalls". The cavern is home to a small pack of Grell.</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>A stampede of wildlife, a bizarre mix of all species, burst out of a
+nearby forest</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>A local druid has posted signs asking for hunters to register their
+names with him before taking any game. 3 arrows are piercing one of
+them, and others are torn or ripped. A few stags antlers have been tied
+to tree trunks, as if in defiance.</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>A shipwreck on a nearby coast is swarming with orc raiders</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>A travelling family warns of swarms of mating stirge in the nearby
+area, and many angry farmers who are blaming the disinterest of the
+local ruler for their dead cattle (and children).</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>2 paladins have met in a field, each with a second, and a herald, to
+fight a duel of honour.</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>The party finds a fully charged (100 uses) Wand of Wonder. It cannot
+be thrown away, and compels the user to point the wand and shout the
+command word ("SHICKETYSHAK!") every time the owner enters combat or the
+boundaries of a village, town or city. Once 100 charges have been
+expended, the Wand teleports 100 miles away, and fully recharges.</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>Strangers report a dangerous section of road that passes through a
+dark wood. Murderous kenku have taken the road and are extorting every
+hapless traveller.</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>Every night ravenous swarms of Grimlocks boil up out of the
+Underdark to terrorise a village that is slowly losing the fight.</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>The hanging corpse of a local Ranger hangs from a tree, his hands
+and feet have been removed and cannot be found. A bloody carving in his
+naked chest may be identified as the feyclan mark of a family of
+Quicklings. There are skull-dangles throughout the forest and many
+traps.</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>A group of Githzerai suddenly teleport into the area, see the party
+and yell at them to run, flee! FLEE! A group of Githyanki teleport in 1
+minute later</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>A sea journey is stopped by calm winds and the haunting predations
+of an angry revenant - the spirit of the true captain, a woman murdered
+40 years previously.</td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>A murderous cabal of Wereseals (yes they existed in 2e) have camped
+in some coastal caves. They are preying on passing ships as well as
+passing caravans. One of them wears a headband that keeps it in
+telepathic contact with its true master, an offshore Aboleth.</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>Two tribes of goblins engaged in murderous warfare on one another.
+One chieftain wears a cursed ring that drives the owner to obsessively
+eat the flesh of its own species.</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>A torrent of rain, high winds and lightning drive the party
+underground to take shelter. There they find a mysterious cave tucked
+away in a side passage - the bodies of two strange races held in
+stasis.</td>
+</tr>
+<tr class="odd">
+<td>21</td>
+<td>The party finds a ray gun. It fires twice reliably, and then only
+ever again if the owner is near death (under 1/4 of total HP). Range:
+120 Damage: 2d6 necrotic and 5% chance to disintegrate target. This
+automatically works on a critical hit. The gun will function 1d20+1
+times before burning out. It cannot be repaired. Its owner, a young
+Illithid hunter, may come looking for it.</td>
+</tr>
+<tr class="even">
+<td>22</td>
+<td>A serial graffiti artist has been creating disturbing works of art
+on local buildings and the some of the residents have had psychological
+breaks after looking at them for too long.</td>
+</tr>
+<tr class="odd">
+<td>23</td>
+<td>The All Fool's Day Parade appears on the horizon. The King of Fools
+has many followers, all of them quite mad, but jolly. Some hundreds
+walking, riding, operating strange contraptions, come closer. Chaotic,
+wild music and singing, sinuous and whirling dancers may just draw the
+party along for a celebration that will last days, possibly weeks before
+the party is released, forever changed.</td>
+</tr>
+<tr class="even">
+<td>24</td>
+<td>Two boys are fighting over a travelling satchel in the middle of the
+road. A squirrel is perched on the case and is watching the fight, very
+agitated, and chittering loudly. Overhead a jackdaw swoops one boy again
+and again, making lots of noise.</td>
+</tr>
+<tr class="odd">
+<td>25</td>
+<td>Reports of a girl lost in the nearby area. They say she had gone
+missing before, and had been found in a local valley, stone cold and
+refusing to speak.</td>
+</tr>
+<tr class="even">
+<td>26</td>
+<td>A group of thieves have set up a travelling medicine show, selling
+patent medicines and manuals of healthy living. They are drugging the
+wealthy who stop by, and replacing them with members of a tribe of
+doppelgangers who have threatened the gang with death if they do not
+comply.</td>
+</tr>
+<tr class="odd">
+<td>27</td>
+<td>One of the party wakes up with bloody hands and a letter in their
+pocket. The letter is written in a rare language, and is printed on
+human skin. Its contents are a lie, and are just the beginning of a
+campaign of psychological torture by a leprechaun that has latched onto
+the player and who remains nearby, invisible.</td>
+</tr>
+<tr class="even">
+<td>28</td>
+<td>A huge blackened circle of scorched and burnt earth and trees. In
+the centre of the circle is the body of a paladin. In his hand is a Holy
+Avenger. The Avenger is awakened. Its name is [insert cool name
+here]</td>
+</tr>
+<tr class="odd">
+<td>29</td>
+<td>A collector has decided one of the party members should belong to
+her collection of beautiful specimens. The collector starts leaving
+gifts for the party member to find, becoming increasingly romantic,
+until one night when the collector (use an intelligent outsider) comes
+for her prize.</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>A drunken sailor tells tale of his ship that was taken by "reavers",
+murderous cannibals who ripped his crewmates apart. He is lying. It
+wasn't his ship. But a pack of kuo-toa have been plundering the local
+shipping lanes and soon they will grow bored of waiting for prey and
+attack the nearby population.</td>
+</tr>
+<tr class="odd">
+<td>31</td>
+<td>Tornado!</td>
+</tr>
+<tr class="even">
+<td>32</td>
+<td>A local pie-eating contest is being held. The prize is a small Bag
+of Pies, a minor magic item that conjures 1 type of any kind of fruit
+pie per day. The entry price is 20 coins.</td>
+</tr>
+<tr class="odd">
+<td>33</td>
+<td>A dog barks at the party, insistently. Tries to get the party to
+follow. If they do, the dog will lead them to a ramshackle cabin where
+the dogs friends, a group of Jackalwere (use stats, but just describe as
+particular dog breed), who have been doing this to travellers for a
+while, and have amassed a decent pile of treasure.</td>
+</tr>
+<tr class="even">
+<td>34</td>
+<td>A dimensional gate opens and a contingent of 255 Modrons spill
+forth, measuring and collecting samples of everything (including
+lifeforms)</td>
+</tr>
+<tr class="odd">
+<td>35</td>
+<td>A planar resonance occurs and forces open a True Gate to the
+demi-plane of Ravenloft (The Mists)</td>
+</tr>
+<tr class="even">
+<td>36</td>
+<td>A smear of 3 grey oozes pick up the party's trail in civilisation
+and are pursued relentlessly</td>
+</tr>
+<tr class="odd">
+<td>37</td>
+<td>At a crossroads, on a hill, near a forest, a family of Ankheg are
+engaged in an all out war with a large force of Aarakocra. The bird-folk
+send a scout to determine the party's intentions.</td>
+</tr>
+<tr class="even">
+<td>38</td>
+<td>Tidal Wave!</td>
+</tr>
+<tr class="odd">
+<td>39</td>
+<td>A bronze dagger, rusty with age, is lying in the dirt of a
+wilderness crossroads. It is the last memory of a Nothic, bound to the
+old blade. The dagger is actually +1 due to its masterwork quality, but
+the Nothic will whisper insane threats and ramblings of nonsense, while
+promising untold power if the user will only free him. This cursed blade
+can be destroyed as any artefact would.</td>
+</tr>
+<tr class="even">
+<td>40</td>
+<td>The Dance of the Skeletons, a celebration of the Deity of the Dead,
+marked by debauchery and music, has been interrupted by a huge swarm of
+Peryton, come to feed in the breeding season.</td>
+</tr>
+<tr class="odd">
+<td>41</td>
+<td>A noise, getting louder and louder becomes a human falling towards
+the party's position at terminal velocity. The human misses the party
+when hitting the ground, creating a 10' hole and knocking the party
+prone. 50/50% chance the human has actually survived.</td>
+</tr>
+<tr class="even">
+<td>42</td>
+<td>A group of men burst out of the nearby tavern, fighting bloodily
+with knives and skillets, chairs and broken tankards. The fighting
+engulfs the party.</td>
+</tr>
+<tr class="odd">
+<td>43</td>
+<td>A small boy appears in the party's camp one night, sitting by the
+fire. He never speaks and cannot be touched, not through being
+incorporeal, but through a repulsion field that is beyond 30th level
+magic. The boy stays one hour and then vanishes. This event occurs every
+night for a week. On the last night one of the players finds a ring on
+their finger. This ring contains 1 dose of a poison that will kill any
+creature in the known realms without a saving throw. It also kills the
+poisoner.</td>
+</tr>
+<tr class="even">
+<td>44</td>
+<td>A bard's camp has been set up, and a wooden stage is filled with a
+group of 6 minstrels singing and playing music. A large crowd has
+gathered and are clapping and stomping. An 18th level rogue is in the
+crowd. He has been hired to steal something from each of the party
+members. His boss is a Medusa.</td>
+</tr>
+<tr class="odd">
+<td>45</td>
+<td>A purple worm hole opens in civilisation overnight. If explored, a
+new campaign should begin.</td>
+</tr>
+<tr class="even">
+<td>46</td>
+<td>An old woman approaches the party on the road. She is marked with
+deformity and is overburdened with baggage. If the party approaches, the
+ruse will be revealed to be a Doppelganger who is carrying 2 (or 4)
+Mimics. They have been doing this a long time, but the DG hates his
+slavery and will flee, leaving the mimics behind if the battle
+turns.</td>
+</tr>
+<tr class="odd">
+<td>47</td>
+<td>A local wood-elf tribe, known to be friendly in trade, have suddenly
+shut their forest-gates and are turning all visitors away. Rumours of a
+new sickness swirl.</td>
+</tr>
+<tr class="even">
+<td>48</td>
+<td>Ogres have gathered in a nearby valley in their teeming hundreds.
+They have come to choose a new King, and the blood-games are about to
+begin. They will last for 10 days and after the King is crowned, they
+will rampage on the surrounding area, concentrating on live slaves and
+food for the coronation feast. The King's name is always Bubba.</td>
+</tr>
+<tr class="odd">
+<td>49</td>
+<td>Zombies, risen from a nearby graveyard are bothering travellers. If
+the party intervenes they discover the zombies are asking for parley.
+They are not mindless. They are not hungry. They are something new. They
+need help.</td>
+</tr>
+<tr class="even">
+<td>50</td>
+<td>A threesome of Shadows have taken up residence in civilisation. They
+have been unable to keep their hunger under control, and they have been
+seen. The party discovers this when they enter the streets and find the
+city in a religious fervour, the Temples preaching overtime at the Evil
+in their Midst.</td>
+</tr>
+<tr class="odd">
+<td>51</td>
+<td>A drunken musician tells one of the party that if they can play his
+instrument (I swear this isn't entendre) as well as he can, he'll pay
+them a large sum of money. If they agree, they have a 5% chance to
+actually win. The musician goes first and always rolls a 20. If the
+player loses, the musician becomes enraged and insults the player. If
+they win, the musician laughs and screams and jumps up and down and runs
+off leaving the player with the instrument. An angry (cursed) Pixie is
+attached to the instrument. She will threaten and emasculate the user in
+a tiny voice only the user can hear, and will only be silenced with
+music. The cursed instrument can be cleansed by a high level divine
+caster.</td>
+</tr>
+<tr class="even">
+<td>52</td>
+<td>A Gibbering Mouther rolls out of somewhere. It's delighted to see
+the party, calling out "Hey! HEY FILTH! C'mere you filthy fucker! YEAH
+YOU YA MEATBAG! FILTH! Hey, WAIT!". It will pursue the party until dawn,
+and will fade with the rising sun, returning to the Demi-Plane of
+Hunger. It will pursue the party for a week, appearing at dusk.</td>
+</tr>
+<tr class="odd">
+<td>53</td>
+<td>A party of adventurers, bedraggled and bloodied, comes limping down
+the road. They tell tale of a Formorian giant who has demanded a toll of
+all who pass, and has killed every attempt to drive it out. A large
+bounty is on the Formorian's head, offered by the head of a local
+merchant's guild.</td>
+</tr>
+<tr class="even">
+<td>54</td>
+<td>Satyr's Gone Wild - its a hot summer night and the moon is full. A
+large pack of Satyr are caught in a Bacchanalia, and are gathering up
+stragglers as they go, but what the travelling party will soon find out
+is that they are being hunted by a hunting tribe of Slaadi, who have
+breached the plane nearby, with a Timed Gate.</td>
+</tr>
+<tr class="odd">
+<td>55</td>
+<td>As the party is breaking camp, they are overrun by a huge group of
+Crawling Claws. A nearby Necromancer (3 levels above party) is watching
+nearby, and this is a test of his new creations. If spotted or the Claws
+are defeated, he will flee to a nearby tower and attempt to contact his
+master, an Oni.</td>
+</tr>
+<tr class="even">
+<td>56</td>
+<td>Ettercap have taken over a village. They have nearly all the humans
+in a protected larder, and are watching for rescue. There is a nearby
+Dryad who will aid the party if they look like they will aid the
+village.</td>
+</tr>
+<tr class="odd">
+<td>57</td>
+<td>One of the party members wakes up with a disease. It is highly
+contagious, but will not kill the original host. The disease kills in 1
+week, but if anyone who is infected remains in close proximity to the
+original host after 7 days have gone by, they will benefit from the
+change in the disease's chemistry, and be cured.</td>
+</tr>
+<tr class="even">
+<td>58</td>
+<td>A woman is blowing a whistle and screaming that someone has stolen
+her daughter. She is pointing "that way" and will tell any who listen
+that her little girl's name is Binta and she is only 6 years old. She
+will try to accompany anyone who says they will help search. She will
+keep thinking she sees her daughter. She is delusional. She has no
+daughter.</td>
+</tr>
+<tr class="odd">
+<td>59</td>
+<td>One morning a thick fog rolls in, ice cold and lingering. With it
+brings a hunting pack of Merfolk. They are hunting "swine" as payback
+for the Coast Wars in the distant past. The Merfolk's village is in a
+nearby bay, and their predations will continue for several months. The
+leader of the Merfolk is quite mad, driven so by the attempts to woo a
+sexy fishlady. She is unimpressed with his antics.</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td>A merchant caravan is being swarmed with Goblin raiders. There are
+hundreds of them, attacking at least 10 wagons. If chased off, they flee
+towards an old wooden fort mouldering in the forest. A hobgoblin band of
+exiles commands them.</td>
+</tr>
+<tr class="odd">
+<td>61</td>
+<td>Everyone in the town is afflicted by horrible nightmares, night
+after night, including the party. Its always the same dream for
+everyone. The entire town burns to the ground and everyone devoured by
+shadowy forms, unless the town sacrifices their children in a nearby
+cave system. In a cavern under the town sits an imprisoned Yugoloth.
+It's trapped in a circle of Binding, an impressive one, as the spell has
+persisted after its owner's death (whose body lays just meters from the
+trapped demon). The demon will hound the town until the townfolk perform
+the Unbinding for him, and he can escape. The demon's true name is
+Emman-Gutsucker</td>
+</tr>
+<tr class="even">
+<td>62</td>
+<td>While the party is trying to be stealthy, they come across a small
+swarm of Flumph flitting about, some resting on any nearby walls or
+objects. A triad of Illithid is nearby, interrogating a local prisoner
+for information on an artefact. The Flumph are simply feeding, and will
+flee if interfered with or attacked. The three Mind Flayers are close
+by, perhaps underground.</td>
+</tr>
+<tr class="odd">
+<td>63</td>
+<td>The party comes across a pair of mating Owlbears, and a group of
+Rangers who warn the party off and threaten violence if they interfere.
+The Rangers give no names and will say no more, but attack if necessary
+and flee to warn others if hard-pressed. The Rangers are, in fact,
+Rogue/Wizards, who are trying to breed new aberrant species, and the two
+"Owlbears" are, in fact, an Ettin and an Umber Hulk (yegods that's a
+memorystain you can't erase), under a mass Illusion spell. This trick
+will become apparent if the creatures are attacked.</td>
+</tr>
+<tr class="even">
+<td>64</td>
+<td>A pseudodragon appears in the party's camp, begging their help with
+a terrible disaster to have befallen a local racial outpost. The dragon
+makes wild and imaginative accusations of crazy mixed up creatures with
+goofy, cartoon powers. IF the party decides to help, the PDragon leads
+them on a wild goose chase, playing pranks on them and berating them for
+moving so slowly. If the party declines, the PDragon takes immediate
+offense, goes invisible, and actively interferes in the party's lives
+(in the form of a -1 to every roll) for the next 7 days.</td>
+</tr>
+<tr class="odd">
+<td>65</td>
+<td>A traveller on the road passes the news that the local mining
+concern has put out a reward for anyone who will clean out their mines
+from an infestation of Rust Monsters (and possibly a Roper (or two)).
+The reward is substantial and a Wand of Ice (3 charges) will be given to
+the party directly when they accept the challenge.</td>
+</tr>
+<tr class="even">
+<td>66</td>
+<td>A group of lost boys. A series of flyers asking for help, in
+multiple towns. Then rumours they have returned, and sickness follows
+them. A dread pestilence that causes all loss of appetite. This is just
+the latest is a series of "pranks"by a Jubilex, the Faceless Lord (pg.
+52 PHB 5e)</td>
+</tr>
+<tr class="odd">
+<td>67</td>
+<td>During the night there is an explosion and a flash of light brighter
+than daylight. A crater is nearby, and the body of a Planetar is
+embedded at the core. It's Fiendquencher blade is missing. The Planetar
+looks as if it has been torn apart by a million tiny cuts. There is a
+handful of tiny machine parts, cogs and gears and flywheels near the
+body, scattered about. It appears that a CE Tinker Gnome has,
+incredibly, completed his Life Goal and slain one of the Celestial
+Elites. The Gnome's army of micro-machines and the Gnome himself are
+nearby, gloating.</td>
+</tr>
+<tr class="even">
+<td>68</td>
+<td>Earthquake!</td>
+</tr>
+<tr class="odd">
+<td>69</td>
+<td>Hobgoblins have decided to lay siege to a local fortified town.
+Their lines are loose for now, but will firm up over the next week and
+their leader, a cunning Ogre, will definitely win this fight if no
+outside help comes. It's the first of many campaigns by this growing
+army.</td>
+</tr>
+<tr class="even">
+<td>70</td>
+<td>The party comes across a huge tumbled wagon and the bodies of many
+dead dwarves. A few are struggling in the wreckage and the ear-splitting
+cries of the captured Hippogriff nearly deafens everyone. The Hippogriff
+will break free soon, and the remaining dwarves are terrified. They work
+for a circus, one camped 3 days away. The circus leader is a Dragonborn
+named Ohpa Tuntunndrentington</td>
+</tr>
+<tr class="odd">
+<td>71</td>
+<td>A passing train of wagons (at least 10) has very friendly
+passengers. They urge the party to join them and save themselves the
+trouble of walking. They are heading into the wilderness to start a new
+village. Which is true. But the leaders of the caravan have hosts being
+controlled by Intellect Devourers, and their true master, an Illithid,
+is waiting for them to arrive.</td>
+</tr>
+<tr class="even">
+<td>72</td>
+<td>A lover's fight has gotten out of hand, and now the town is on fire.
+The area where the party is staying is completely ablaze. Magmin can be
+seen scampering in the inferno.</td>
+</tr>
+<tr class="odd">
+<td>73</td>
+<td>The local bard's troupe are a band of Wererats, and one of them has
+contracted a disease which prevents her from returning to her human
+form. In panic, the infected Wererat/Bard stumbles into the party and
+begs their help.</td>
+</tr>
+<tr class="even">
+<td>74</td>
+<td>A party member wakes up to find themselves surrounded by small
+wildlife. The animals may be driven off, but will always return. After
+10 days, the party member will begin to show minor physical signs of
+plant-like changes. After 20 days the wildlife will disappear and only 1
+will remain as a True companion.</td>
+</tr>
+<tr class="odd">
+<td>75</td>
+<td>Two words. Crashed. Spaceship.</td>
+</tr>
+<tr class="even">
+<td>76</td>
+<td>A local Hill Giant is demanding tribute again. The request this time
+is 3 virgins ("this time"... ahem) and the town is refusing. So far 14
+boulders the size of wagons have come crashing over the walls. The town
+is desperate. The giant is hungry and has a Wand of Fireballs (2
+charges).</td>
+</tr>
+<tr class="odd">
+<td>77</td>
+<td>The party comes across a battle between Treants and Thri-Kreen. They
+are both being controlled from afar by a powerful evil Druid, who wishes
+to stir up and break all the old alliances here. His minions, some
+Sprites, can be seen hanging around the battlefield. They will flee if
+attacked, reporting back to their master.</td>
+</tr>
+<tr class="even">
+<td>78</td>
+<td>The party is attacked in their rooms by every object present,
+including their own weapons and armor (treat every item as an Animated
+Object). A local teenager has just discovered they are a powerful Wild
+Mage, and the entire town is experiencing the same. Every day some new
+strange occurrence will confront the populace.</td>
+</tr>
+<tr class="odd">
+<td>79</td>
+<td>The party disturbs the napping place of a Xorn. It is the pet of a
+Stone Giant who has gone to look for food. If the Xorn is killed, the
+Giant will go on a rampage.</td>
+</tr>
+<tr class="even">
+<td>80</td>
+<td>Three words. Giant. Pink. Bunnies. You decide why :)</td>
+</tr>
+<tr class="odd">
+<td>81</td>
+<td>A cabal of Wizards has gathered to perform a ritual of Permanency on
+a local building. They need some fresh corpses to complete it. They send
+out scouts to ambush the locals. One of the scouts attacks a party
+member.</td>
+</tr>
+<tr class="even">
+<td>82</td>
+<td>A mixed collection of Golems are rampaging across the countryside.
+They appear to be free-willed.</td>
+</tr>
+<tr class="odd">
+<td>83</td>
+<td>Blizzard! or Flood! or Sea/Sandstorm!</td>
+</tr>
+<tr class="even">
+<td>84</td>
+<td>A famous and beautiful actor/tress has come to town to perform. The
+celebrity takes a shine to one or more of the party members. After many
+meetings over several nights, she invites her new fans to attend a party
+on her yacht. The celebrity is a Night Hag and she mighty damn hungry.
+On the ship are Sahuagin disguised as sailors with illusions.</td>
+</tr>
+<tr class="odd">
+<td>85</td>
+<td>Wights from a nearby cemetery have been given orders by a Will O'
+Wisp (with 20 INT) to start taking slaves from the local area. The Wisp
+needs bodies for a ritual that it wants to do to try and transfer itself
+into the body of a host.</td>
+</tr>
+<tr class="even">
+<td>86</td>
+<td>A unicorn appears from the Feywild, and warns the party of a great
+approaching evil, and the confluence between the Shadowfell, the Prime
+Material Plane, and the Feywild. This is all a lie, the trick of an
+Enchanter who likes to see how adventurers plan to destroy a great evil,
+and then helps them destroy themselves.</td>
+</tr>
+<tr class="odd">
+<td>87</td>
+<td>A vampire comes to the party in broad daylight and begs the party to
+help him die. Nothing will work. He is truly condemned to immortality,
+but begs the party to find a great beast that can devour him whole.</td>
+</tr>
+<tr class="even">
+<td>88</td>
+<td>A pack of Mephits (appropriate to the terrain) stalks and terrorizes
+the party until destroyed or driven off. They delight in theft and traps
+that injure.</td>
+</tr>
+<tr class="odd">
+<td>89</td>
+<td>A poltergeist gets attached to one of the party's items.</td>
+</tr>
+<tr class="even">
+<td>90</td>
+<td>A troll appears from under a bridge, demanding a toll. It's wearing
+an armband inscribed with the symbol of the Deity of the
+Road/Explorers/Travelers. It will not attack if not paid, but will
+defend itself. If the toll is not paid, the Troll will send an Invisible
+Stalker after the offender, by using a Ring of Stalkers (that I just
+made up) that has (4) charges left.</td>
+</tr>
+<tr class="odd">
+<td>91</td>
+<td>The party hears the panicked scream of a horse, but discovers a
+tribe of orcs who have somehow managed to capture a Pegasus in a heavy
+wired net.</td>
+</tr>
+<tr class="even">
+<td>92</td>
+<td>A local druid enclave is so desperate they have put up signs asking
+for help with the Vegetable Menace, a self-styled King of Shamblers. The
+druid's sacred grove has been taken over by a powerful Shambling Mound
+and its been creating human-vegan thralls to serve it.</td>
+</tr>
+<tr class="odd">
+<td>93</td>
+<td>A house of Drow have taken over the nearest town and are capturing
+all who visit. They plan on selling the inhabitants to a stronger House,
+in exchange for larger trade sanctions and a seat on the Council. They
+have Driders.</td>
+</tr>
+<tr class="even">
+<td>94</td>
+<td>One morning one of the party member's weapons decides to speak.</td>
+</tr>
+<tr class="odd">
+<td>95</td>
+<td>On a rocky field a pack of Displacer Beasts and Blink Dogs wage the
+oldest war known to their species. If the party intervenes on behalf of
+the Dogs, they will give the True location to a cache of treasure
+nearby.</td>
+</tr>
+<tr class="even">
+<td>96</td>
+<td>A local falsely accuses a party member of theft and blackmail. The
+local is wealthy, but not well liked. The town guards get involved.</td>
+</tr>
+<tr class="odd">
+<td>97</td>
+<td>In a tavern, an attractive person approaches one of the party
+members. They give the party member an invitation to an exclusive party
+in a nearby secret location. The attractive person wants to go now. The
+party is a recruitment drive for the Deity of
+Love/Pleasure/Procreation/Etc.. and is very hedonistic and lasts 2 days.
+The party member may or may not be asked to join as a Seeker of the
+Faith.</td>
+</tr>
+<tr class="even">
+<td>98</td>
+<td>A group of dwarves are over-logging a nearby wood. Some of their
+hanging corpses have been found near a common byway. A local bandit gang
+is behind it, worried the dwarves' activity will bring Rangers to the
+area, or worse, Druids.</td>
+</tr>
+<tr class="odd">
+<td>99</td>
+<td>A group of CG goblins have set up a trader's camp, and have some
+wares on display. They speak limited Common, and will haggle over every
+purchase, if they are not just slaughtered on sight by roaming bands of
+murderhobos.</td>
+</tr>
+<tr class="even">
+<td>100</td>
+<td>A gold dragon lands nearby and asks the party if they want to hear a
+joke.</td>
+</tr>
+</tbody>
+</table>
+<p><a
+href="https://www.reddit.com/r/DnDBehindTheScreen/comments/2v6jes/50_plot_hooks/">Source
+1</a> <a
+href="https://www.reddit.com/r/DnDBehindTheScreen/comments/2v6jga/50_more_plot_hooks/">Source
+2</a></p>
+</body>
+</html>

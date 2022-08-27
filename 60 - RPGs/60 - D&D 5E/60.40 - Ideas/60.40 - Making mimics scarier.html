@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.40 - Making mimics scarier</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<h1 id="making-mimics-scarier">Making mimics scarier</h1>
+<p>In this post, I will outline a different philosophy for running
+mimics that makes them a far more dangerous and versatile enemy than
+described in the Monster Manual. I'm going to follow Matt Colville's
+method and put the best stuff first.</p>
+<ul>
+<li>Like dragons, mimics grow both physically and mentally for their
+entire lives. They are immortal and there is no known upper limit on
+their size. They absorb the flesh of their victims and add it to their
+own mass.</li>
+<li>Mimics can reshape their body at will in a matter of seconds order
+to grant themselves beneficial attributes for a given situation. They
+are not limited to mimicking inanimate objects; they can mimic animals,
+monsters, humanoids…any creature the mimic has seen before is fair game.
+The smarter ones can even take on new forms never seen before. Their
+only limits are physics (conservation of mass) and their own memories
+and experiences…which grow as the mimic ages.</li>
+<li>Take a minute to think about how many options this gives you when
+running this monster. Need to do more damage? Give yourself another set
+of claws or mouths. Want to grapple the tank? Grow four extra arms
+and/or tentacles and wrap them up. Having trouble spotting the rogue in
+the shadows? Grow a couple dozen extra eyes. Getting attacked too many
+times per round? Cover your entire body in bone armour, and/or give
+yourself porcupine levels of spikes so people take damage every time
+they hit you. Taking a lot of thunder damage? Get rid of your ears and
+give yourself resistance. The mage staying out of reach? Give your arm
+three extra elbows and grab him. With a little ingenuity, you can turn
+an underwhelming trap monster into a beast capable of threatening even
+high-level parties.</li>
+<li>No matter the situation, you can gain or lose the features that are
+the most advantageous for you at the time, so even if the players feel
+they’ve gotten the upper hand, you can flip the script on them. Even if
+the mimic isn’t threatening to TPK them, you can really frustrate your
+players by never letting them pin it down and force it to fight on their
+terms. Your description of the combat will help reinforce this
+perception. Don’t just describe the blow hitting the PC, describe how
+the PC dodges out of the way of the blow, but the arm lengthens by six
+inches mid-swing to turn it into a hit anyway. The arrow didn’t miss the
+mimic, the mimic’s flesh moved out of the path of the arrow and the
+arrow sailed through the hole. Never miss an opportunity to remind the
+players that the battle would be going more in their favour, but the
+mimic keeps changing the rules.</li>
+<li>The best part is, this approach is really easy to scale up or down
+to the level of your party. Just raise or lower the mimic’s hit points,
+attack bonus, and number of attacks as appropriate, and the combat will
+still have a unique feel at high levels or low ones without being
+unbalanced. As you scale a mimic up to Large- or Huge-sized, you can
+increase the number of separate augmentations it can have up at a time.
+Maybe a Medium mimic can only grow two extra limbs or extend its reach
+by 10 feet, while a Huge mimic can have six 20-foot tentacles, a
+rhino-like body structure, and a gore/bite/trample combo all available
+to it at once. And since their intelligence is variable, you can play
+mimics with more/less strategic thinking depending on whether you need
+to make the encounter easier or harder. Your mimic can be a cunning
+opponent that changes the tone of the combat on every turn, or it can be
+a chest that figured out how to give itself arms and doesn’t have any
+other gimmicks.</li>
+<li>Naturally, this versatility makes it a little pointless for me to
+list a specific stat block here. If you want to be rigorous about it,
+you can make a list of your mimic’s menu of possible abilities before
+the party encounters it, but the fluid nature of the mimic means that
+you can come up with new ones on the fly fairly easily. So long as you
+keep it somewhat reasonable, like only one form change per turn as a
+bonus action, your players should accept it without too much
+questioning.</li>
+</ul>
+<p>Here are some general features you can use:</p>
+<ul>
+<li>Reach</li>
+<li>Switch between bludgeoning, slashing, and piercing damage as
+needed</li>
+<li>Advantage on any skill any animal could be reasonably expected to
+have (Perception and Stealth are the big ones)</li>
+<li>Advantage on grapple checks</li>
+<li>Climb, swim, or fly speed as needed</li>
+</ul>
+<p>And here are some extra features you can add to challenge a
+high-level party:</p>
+<ul>
+<li>Skin covered in mouths that latch onto anything they touch and start
+chewing. This ability actually fits well with the mimic’s existing
+Adhesive property; you just add some damage for any character that
+starts their turn grappled by the mimic.</li>
+<li>Grapple-on-hit attacks like chuuls, ropers, snakes, and others.</li>
+<li>Extra bone/scale armor for damage resistance or high AC</li>
+<li>Regeneration</li>
+<li>Ooze-like engulf ability</li>
+<li>Magic resistance</li>
+<li>Active camouflage, ranging from advantage on Stealth checks to de
+facto invisibility</li>
+<li>Ability to mimic magical abilities (dragon’s breath, displacer beast
+displacement, etc.). Maybe let it only use the features of its past
+victims?</li>
+<li>Immunity to flanking or (if you feel really mean) the rogue’s sneak
+attack feature</li>
+<li>Disguises itself as another, weaker monster to draw in unwary
+adventurers</li>
+<li>Ability to perfectly mimic the appearance and voice of a party
+member (combine with a telepathic ally for real-time mirroring)</li>
+<li>Potential flaw: will devour itself over time in the absence of
+food</li>
+</ul>
+<p>To add veracity, you can restrain yourself to only features possessed
+by other monsters in the area. Some features my mimic used in an
+Underdark setting:</p>
+<ul>
+<li>Echolocation of a hook horror</li>
+<li>Tendrils of a roper</li>
+<li>Sense of smell &amp; stealth of a hunting cat (displacer beast)</li>
+<li>Wings of a cloaker</li>
+</ul>
+<p>Through 10 levels of a 5e campaign, this variant mimic is one of the
+few monsters my party straight up decided they didn’t want to fight. All
+I had to do was have them come upon a slaughtered goblin village with
+almost all of the bodies missing, just a few scattered hands and feet
+left. The tracks changed from giant pawprints to a slithering trail,
+then disappeared when the cave opened up into a larger cavern. I had
+their NPC guide react with terror and explain what this was, and my
+players noped out of the mimic’s entire territory.</p>
+<p>The cherry on top that really sells this monster is your flavor
+description. You shouldn’t just describe it as shapeless and amorphous
+like an ooze; if your players are anything like mine, they start to view
+oozes as little more than annoying Jell-O molds after a few encounters.
+Instead, make sure the players understand that this is the ideal union
+of mind and flesh…a creature whose body can perfectly accommodate any
+designs of its guiding intelligence. Every time it takes a new form,
+that new shape looks as real as the actual animal it is based on, right
+up until it unnaturally twists, elongates, and reforms like a Surrealist
+painting come to life. A nightmare made flesh, bristling with spines,
+horns, teeth, claws, eyes, and limbs in unnatural and malevolent
+configurations. Really lean into the body horror aspect and try to draw
+inspiration from any medium you can think of. I scared the crap out of
+my characters by giving my mimic the Predator clicking sound, echoing
+through the passageways of the Underdark as it hunted the party. If you
+do this right, your players will envision something less like Reed
+Richards and more like The Maker.</p>
+<p><a
+href="https://www.reddit.com/r/DnDBehindTheScreen/comments/ddnfzj/making_mimics_scarier_a_hopefully_fresh_take_on_a/">Source</a></p>
+</body>
+</html>

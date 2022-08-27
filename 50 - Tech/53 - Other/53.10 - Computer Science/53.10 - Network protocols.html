@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>53.10 - Network protocols</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="school-tech">school #tech</h1>
+<ul>
+<li>A protocol is a set of rules that instruct how to do something
+<ul>
+<li>All devices can communicate with one another because they use
+protocols</li>
+</ul></li>
+<li>Protocols determine:
+<ul>
+<li>How a device is identified</li>
+<li>How communication should start and end</li>
+<li>Which network port communication should use</li>
+<li>What route data will take</li>
+<li>How errors will be checked</li>
+<li>How to acknowledge if data is received</li>
+<li>What to do if data isn't received</li>
+<li>How data is formatted and sequenced</li>
+<li>How the speed of the sender and the receiver can be synced</li>
+</ul></li>
+<li>Email protocols:
+<ul>
+<li>There are several email protocols
+<ul>
+<li>SMTP:
+<ul>
+<li>SMTP stands for Simple Mail Transfer Protocol, and it allows users
+to send emails</li>
+</ul></li>
+<li>POP:
+<ul>
+<li>POP stands for Post Office Protocol, and it allows emails to be
+downloaded</li>
+<li>The server stores the email until you request it, after which the
+email is on your device and the server deletes it</li>
+<li>The advantage of this is that you can read your emails while not
+connected to the internet</li>
+<li>The disadvantage is that you can't view your emails from another
+device</li>
+</ul></li>
+<li>IMAP:
+<ul>
+<li>IMAP stands for Internet Message Access Protocol</li>
+<li>It allows you to download emails from a server, however the server
+still keeps a copy of the email on the server</li>
+<li>IMAP syncs both the client and the server to have the same
+emails</li>
+<li>The advantage of this is that you can access your emails from any
+device</li>
+<li>The disadvantage is that this can take up a lot of space on
+server</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Wi-Fi:
+<ul>
+<li>Wi-Fi is a set of standards that determined how network devices
+should communicate wirelessly, using radio waves</li>
+<li>The official name of Wi-Fi is IEEE 802.11x</li>
+<li>It defines rules such as:
+<ul>
+<li>What frequency radio waves should use</li>
+<li>How powerful the transmitter should be</li>
+<li>How data should be secured</li>
+<li>What happens if data is lost</li>
+</ul></li>
+<li>There are different standards that operate at different speeds:
+<ul>
+<li>802.11g (54Mb/s)</li>
+<li>802.11n (65Mb/s-600Mb/s)</li>
+<li>802.11ac (78Mb/s-3.2Gb/s)</li>
+</ul></li>
+<li>Wi-Fi transmits in two different frequencies:
+<ul>
+<li>2.4Ghz</li>
+<li>5Ghz</li>
+</ul></li>
+<li>Wi-Fi encryption
+<ul>
+<li>Wi-Fi encryptions can be intercepted</li>
+<li>Security measures have been invented to prevent this
+<ul>
+<li>WEP:
+<ul>
+<li>WEP is very basic</li>
+<li>It requires a password
+<ul>
+<li>This password can be cracked easily</li>
+</ul></li>
+<li>None of the data is encrypted</li>
+</ul></li>
+<li>WPA:
+<ul>
+<li>WPA is ok</li>
+<li>It uses a password</li>
+<li>It uses key-based authentication to decode data</li>
+<li>WPA has already been broken, however it is more difficult to do</li>
+</ul></li>
+<li>WPA2
+<ul>
+<li>WPA2 is the best at the moment</li>
+<li>It uses better encryption than WPA to scramble data</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Data packets:
+<ul>
+<li>Packets are small amounts of data sent through a network</li>
+<li>Packets include:
+<ul>
+<li>The senders IP address</li>
+<li>The recipients IP address</li>
+<li>The type of packet</li>
+<li>The amount of packets sent</li>
+<li>The data being sent</li>
+<li>A flag to indicate if the data arrived</li>
+<li>A sequence number to reassemble the data</li>
+</ul></li>
+</ul></li>
+<li>TCP/IP:
+<ul>
+<li>TCP/IP (Transmission Control Protocol / Internet Protocol) is a
+networking stack that describes how data should be formatted</li>
+<li>It is a model that define four layers for networking
+<ul>
+<li>Application layer:
+<ul>
+<li>This is where network software operates</li>
+<li>HTTP:
+<ul>
+<li>This defines how data should be exchanged between web browsers and
+web servers</li>
+</ul></li>
+<li>FTP:
+<ul>
+<li>This defines how data should be transmitted between a server and a
+client</li>
+</ul></li>
+<li>SMTP:
+<ul>
+<li>This defines how email should be sent</li>
+</ul></li>
+</ul></li>
+<li>Transport layer:
+<ul>
+<li>This is where transporting data occurs</li>
+<li>TCP:
+<ul>
+<li>Transmission Control Protocol is a protocol that determines how
+devices should connect</li>
+<li>The destination device must confirm that the packet arrived</li>
+<li>This makes the system reliable</li>
+</ul></li>
+</ul></li>
+<li>Internet layer:
+<ul>
+<li>This is where devices are individually identified</li>
+<li>IP:
+<ul>
+<li>Internet Protocol is a protocol that identifies individual
+devices</li>
+<li>This information helps routers know where data should be sent</li>
+</ul></li>
+</ul></li>
+<li>Data link layer
+<ul>
+<li>This is how packets are transmitted</li>
+<li>Ethernet:
+<ul>
+<li>Defines how data should be transmitted physically</li>
+<li>Wraps the packet in an Ethernet frame which includes a MAC address
+<ul>
+<li>This identifies the device the packet should be sent to</li>
+</ul></li>
+<li>The packets are turned into electrical signals, which are then sent
+to the LAN's router</li>
+<li>If the destination IP is on the LAN, the packet is sent there
+<ul>
+<li>If not, the packet is sent onto the internet</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Each layer is a group of network protocols that work at a similar
+level</li>
+</ul></li>
+<li>IP:
+<ul>
+<li>IP addresses are assigned to devices when they join the network
+<ul>
+<li>They are linked to the operating system of the device</li>
+<li>The address can be configured</li>
+</ul></li>
+<li>IP addresses can be static (permanent), or dynamic (changing)</li>
+<li>There are two types of IP addresses:
+<ul>
+<li>IPv4 is the most common
+<ul>
+<li>It is made up of a 32 bit number, separated by dots, like so:
+<code>192.168.0.125</code></li>
+<li>IPv4 addresses have started to run out</li>
+</ul></li>
+<li>IPv6 is less common, but it has many more addresses
+<ul>
+<li>It is made up of a 64 bit number, separated by colons, like so:
+<code>FE80:0000:0000:0000:0202:B3FF:FE1E:3462</code></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>MAC:
+<ul>
+<li>MAC stands for Media Access Control</li>
+<li>MAC addresses are assigned to physical components
+<ul>
+<li>They are more difficult to change than IP addresses</li>
+</ul></li>
+<li>MAC addresses are used to direct packages from one router to
+another</li>
+<li>Multiple network cards in a computer have different MAC
+addresses</li>
+<li>MAC addresses are made up of 48 bit numbers separated by colons,
+like so: <code>00:25:96:FF:FE:12</code></li>
+</ul></li>
+<li>Error detection:
+<ul>
+<li>Packets state which number they are in the sequence, and how many
+there are</li>
+<li>If all packets have been received correctly, a confirmation message
+is sent to the sender</li>
+<li>Packets have checksums. If the checksums don't match when arriving,
+the packet is sent again</li>
+</ul></li>
+</ul>
+</body>
+</html>

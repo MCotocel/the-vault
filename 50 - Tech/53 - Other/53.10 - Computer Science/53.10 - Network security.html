@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>53.10 - Network security</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="school-tech">school #tech</h1>
+<ul>
+<li>There are many threats to networks
+<ul>
+<li>Malware:
+<ul>
+<li>Files are deleted or are encrypted</li>
+<li>Computer crashes and slows down</li>
+<li>Internet connections becomes slow</li>
+<li>Keyboard input is logged</li>
+</ul></li>
+<li>Phishing:
+<ul>
+<li>Gains access to a victim's account
+<ul>
+<li>Can withdraw money or purchase items</li>
+</ul></li>
+<li>Gains access to information</li>
+<li>Identity can be stolen</li>
+<li>This is done by claiming to be from a known, reliable service
+<ul>
+<li>Usually, they include an action, such as clicking a link</li>
+</ul></li>
+</ul></li>
+<li>Brute force attack:
+<ul>
+<li>Guessing password</li>
+<li>Data theft</li>
+<li>Access to systems</li>
+<li>Brute force attacks often start with a dictionary attack, where they
+use a dictionary to guess passwords by simply trying and making small
+modifications to words</li>
+</ul></li>
+<li>Denial of Service (DoS):
+<ul>
+<li>DoS attacks bring down servers by flooding them with requests to
+overload them</li>
+<li>DDoS (Distributed Denial of Service) attacks use a large amount of
+machines (a botnet) to launch requests simultaneously</li>
+<li>These attacks can be minimised by:
+<ul>
+<li>Using firewalls to inspect incoming traffic</li>
+<li>Monitoring the network</li>
+<li>Anti-malware software to avoid servers becoming part of a
+botnet</li>
+</ul></li>
+<li>These attacks result in:
+<ul>
+<li>Loss of access for customers</li>
+<li>Loss of revenue due to downtime</li>
+<li>Lower productivity</li>
+<li>Reputation damage</li>
+</ul></li>
+</ul></li>
+<li>Data interception:
+<ul>
+<li>Logins compromised</li>
+<li>Data stolen</li>
+</ul></li>
+<li>SQL injection:
+<ul>
+<li>Contents of databases tricked into being outputted</li>
+<li>Data can be modified</li>
+<li>SQL attacks can be prevented by input validation</li>
+</ul></li>
+</ul></li>
+<li>The main weak point is people:
+<ul>
+<li>Not installing updates</li>
+<li>Not updating malware</li>
+<li>Not locking doors</li>
+<li>Not locking devices</li>
+<li>Leaving information on desks</li>
+<li>Writing down passwords</li>
+<li>Sharing passwords</li>
+<li>Losing laptops</li>
+<li>Not encrypting data</li>
+</ul></li>
+<li>Attacks can also come from inside of an organisation</li>
+<li>Physical security must also be considered:
+<ul>
+<li>CCTV</li>
+<li>Door locks</li>
+<li>Disabling USB ports</li>
+</ul></li>
+<li>Network security can be enhanced through a variety of ways:
+<ul>
+<li>Firewalls:
+<ul>
+<li>Firewalls examine the traffic between a user's computer and the
+internet</li>
+<li>It checks the incoming and outgoing data to see if it meets certain
+criteria</li>
+<li>If the data doesn't meet the criteria, the traffic is blocked, and
+the user is warned</li>
+<li>All the traffic is logged</li>
+<li>A list of IP addresses that might be harmful is kept and blocks
+access to the mentioned sites</li>
+<li>Firewalls can be bypassed</li>
+<li>Firewalls can't help with carelessness</li>
+<li>Firewalls can also be disabled, which leaves the device open to
+harmful traffic</li>
+</ul></li>
+<li>Proxy servers:
+<ul>
+<li>Proxy servers are servers that sit between the client and a web
+server</li>
+<li>This allows internet traffic to be filtered</li>
+</ul></li>
+<li>Network access control:
+<ul>
+<li>Different access levels for different kinds of users</li>
+<li>Logins and passwords can be required for different levels</li>
+</ul></li>
+</ul></li>
+<li>Why is network security important?
+<ul>
+<li>Information is financially valuable
+<ul>
+<li>People can be identified based on their behaviours</li>
+<li>This information can also sway political policies</li>
+</ul></li>
+<li>Networks must always be available</li>
+</ul></li>
+<li>There are different forms of attack:
+<ul>
+<li>An insider attack is when someone inside of an organisation gives
+details about the organisation to others, or steals information</li>
+<li>A passive attack is when a hacker sniffs data sent over a network.
+This attack is difficult to detect
+<ul>
+<li>Passive attacks involve listening, and are difficult to detect</li>
+<li>This includes:
+<ul>
+<li>Packet sniffing, where the attacker intercepts data</li>
+<li>Man in the middle attacks, where the connection to internet is
+intercepted and data travels through the man in the middle</li>
+<li>DNS spoofing, where the DNS lookup requests are sent to a rogue
+server
+<ul>
+<li>The user is then sent to a fake version of the site</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>An active attack is when someone uses malware or another method to
+compromise a device's or network's security
+<ul>
+<li>Active attacks involve actively attacking a network</li>
+<li>This includes:
+<ul>
+<li>Intercepting data with an active man-in-the-middle attack
+<ul>
+<li>Users often send important information unencrypted over the
+network</li>
+</ul></li>
+<li>Releasing malware into a network
+<ul>
+<li>Malware is short for 'malicious software'</li>
+<li>Malware is usually installed accidentally when the users think the
+software is harmless</li>
+<li>There are different forms of malware:
+<ul>
+<li>Viruses are small pieces of code that are injected into other 'host'
+programs
+<ul>
+<li>They spread via files</li>
+</ul></li>
+<li>Worms are malicious programs that can execute without user
+interaction
+<ul>
+<li>They are self-replicating, and spread to other devices by
+themselves</li>
+</ul></li>
+<li>Trojan horses are programs that the user believes does something
+else
+<ul>
+<li>For example, a 'driver' could actually be a trojan horses</li>
+</ul></li>
+<li>Ransomware encrypts the files on an infected computer and demands a
+ransom
+<ul>
+<li>Sometimes, the program keeps the files encrypted even after the
+money has been transferred to the creator of the program</li>
+<li>Ransomware sometimes doesn't encrypt anything, and just scares the
+user into paying</li>
+</ul></li>
+<li>Spyware gathers information from a user by logging keys pressed,
+turning on the camera and microphone, and recording the screen
+<ul>
+<li>This is done to gather information, potentially to steal
+passwords</li>
+</ul></li>
+<li>Rootkits are programs that modify the operating system to avoid
+detection by antivirus programs
+<ul>
+<li>They are difficult to remove, since they embed themselves into the
+operating system</li>
+</ul></li>
+<li>Backdoors are programs that open up a path for programs and people
+to gain easy access to a device
+<ul>
+<li>This can lead to remote access, where someone in a different
+location can access the device</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Launching a DoS attack against a network</li>
+<li>Cracking a password with a brute-force attack</li>
+</ul></li>
+</ul></li>
+<li>Social engineering is when a person is tricked into giving away
+information
+<ul>
+<li>This can be done by pretending to be either tech support, and asking
+for a user's password, or by pretending to be a user that forget their
+password</li>
+</ul></li>
+</ul></li>
+<li>Unpatched software can cause security threats, due to code that can
+be exploited</li>
+<li>USB devices can expose the network to malware</li>
+<li>Devices can be protected from malware in the following ways:
+<ul>
+<li>Keeping programs up to date</li>
+<li>Installing an antivirus</li>
+<li>Implementing user access levels so that the malware can't spread or
+so that the malware can't install in the first place</li>
+<li>Using a firewall</li>
+<li>Exercising caution</li>
+</ul></li>
+</ul>
+</body>
+</html>

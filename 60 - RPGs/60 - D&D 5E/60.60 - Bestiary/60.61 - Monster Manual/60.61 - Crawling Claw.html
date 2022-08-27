@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.61 - Crawling Claw</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<hr />
+<blockquote>
+<h2 id="crawling-claw">Crawling Claw</h2>
+<p><em>Tiny undead, neutral evil</em> <strong><em> - <strong>Armor
+Class</strong> 12 - <strong>Hit Points</strong> 2 (1d4) -
+<strong>Speed</strong> 20 ft., climb 20 ft. </em></strong>
+|STR|DEX|CON|INT|WIS|CHA| |:---:|:---:|:---:|:---:|:---:|:---:| |13
+(+1)|14 (+2)|11 (+0)|5 (-3)|10 (+0)|4 (-3)| <strong><em> -
+<strong>Damage Immunities</strong> poison - <strong>Condition
+Immunities</strong> charmed, exhaustion, poisoned -
+<strong>Senses</strong> blindsight 30 ft. (blind beyond this radius),
+passive Perception 10 - <strong>Languages</strong> understands Common
+but can't speak - <strong>Challenge</strong> 0 (0 or 10 XP) -
+<strong>Proficiency Bonus</strong> +2 </em></strong> <strong><em>Turn
+Immunity.</em></strong> The claw is immune to effects that turn
+undead.</p>
+<h3 id="actions">Actions</h3>
+<p><strong><em>Claw.</em></strong> <em>Melee Weapon Attack:</em> +3 to
+hit, reach 5 ft., one target. <em>Hit:</em> 3 (1d4 + 1) bludgeoning or
+slashing damage (claw's choice).</p>
+</blockquote>
+<h2 id="crawling-claw-1">Crawling Claw</h2>
+<p>Crawling claws are the severed hands of murderers animated by dark
+magic so that they can go on killing. Wizards and warlocks of a dark
+bent use crawling claws as extra hands in their labors.</p>
+<p><strong><em>Magical Origins.</em></strong> Through dark necromantic
+rituals, the life force of a murderer is bound to its severed hand,
+haunting and animating it. If a dead murderer's spirit already manifests
+as another undead creature, if the murderer is raised from death, or if
+the spirit has long passed on to another plane, the ritual fails.</p>
+<p>The ritual invoked to create a crawling claw works best with a hand
+recently severed from a murderer. To this end, ritualists and their
+servants frequent public executions to gain possession of suitable
+hands, or make bargains with assassins and torturers.</p>
+<p><strong><em>Creator's Control.</em></strong> A crawling claw can't be
+turned, nor can it be controlled by spells that control undead. These
+foul monsters are entirely bound to the will of their creator, which can
+concentrate on a claw in sight to mentally command its every action. If
+the crawling claw's creator doesn't command it, the claw follows its
+last command to the best of its ability.</p>
+<p>Commands given to a crawling claw must be simple. A claw can't be
+tasked with finding and killing a particular person, because its limited
+senses and intelligence prevent it from tracking and picking out
+specific individuals. However, a command to kill all creatures in a
+particular locale works. A crawling claw can easily feel out the
+contours of keys and doorknobs, crawling from room to room on a blind
+killing spree.</p>
+<p><strong><em>Malign Intelligence.</em></strong> A crawling claw
+possesses little of the intellect and memories of the individual of
+which it was once a living part. The hate, jealousy, or greed that drove
+that person to murder lingers on, however, amplified by the claw's
+torturous fragmented state. Left to its own devices, a crawling claw
+imitates and recreates the same murderous acts it committed in life.</p>
+<p><strong><em>Living Claws.</em></strong> If a crawling claw is
+animated from the severed hand of a still-living murderer, the ritual
+binds the claw to the murderer's soul. The disembodied hand can then
+return to its former limb, its undead flesh knitting to the living arm
+from which it was severed.</p>
+<p>Made whole again, the murderer acts as though the hand had never been
+severed and the ritual had never taken place. When the crawling claw
+separates again, the living body falls into a coma. Destroying the
+crawling claw while it is away from the body kills the murderer.
+However, killing the murderer has no effect on the crawling claw.</p>
+<p><strong><em>Undead Nature.</em></strong> A crawling claw doesn't
+require air, food, drink, or sleep.</p>
+</body>
+</html>

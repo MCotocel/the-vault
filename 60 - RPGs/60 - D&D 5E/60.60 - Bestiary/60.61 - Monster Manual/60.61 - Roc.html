@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.61 - Roc</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<hr />
+<blockquote>
+<h2 id="roc">Roc</h2>
+<p><em>Gargantuan monstrosity, unaligned</em> <strong><em> -
+<strong>Armor Class</strong> 15 (natural armor) - <strong>Hit
+Points</strong> 248 (16d20 + 80) - <strong>Speed</strong> 20 ft., fly
+120 ft. </em></strong> |STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:| |28 (+9)|10 (+0)|20 (+5)|3 (-4)|10
+(+0)|9 (-1)| <strong><em> - <strong>Saving Throws</strong> Dex +4, Con
++9, Wis +4, Cha +3 - <strong>Skills</strong> Perception +4 -
+<strong>Senses</strong> passive Perception 14 -
+<strong>Languages</strong> — - <strong>Challenge</strong> 11 (7,200 XP)
+- <strong>Proficiency Bonus</strong> +4 </em></strong> <strong><em>Keen
+Sight.</em></strong> The roc has advantage on Wisdom (Perception) checks
+that rely on sight.</p>
+<h3 id="actions">Actions</h3>
+<p><strong><em>Multiattack.</em></strong> The roc makes two attacks: one
+with its beak and one with its talons.</p>
+<p><strong><em>Beak.</em></strong> <em>Melee Weapon Attack:</em> +13 to
+hit, reach 10 ft., one target. <em>Hit:</em> 27 (4d8 + 9) piercing
+damage.</p>
+<p><strong><em>Talons.</em></strong> <em>Melee Weapon Attack:</em> +13
+to hit, reach 5 ft., one target. <em>Hit:</em> 23 (4d6 + 9) slashing
+damage, and the target is grappled (escape DC 19). Until this grapple
+ends, the target is restrained, and the roc can't use its talons on
+another target.</p>
+</blockquote>
+<h2 id="roc-1">Roc</h2>
+<p>At first sight, a roc's silhouette looks much like any other bird of
+prey. As it descends, however, its unearthly size becomes terrifyingly
+clear. In flight, a roc's wingspan spreads two hundred feet or more. At
+rest, perched upon the mountain peaks that are its home, this monstrous
+bird rivals the oldest dragons in size.</p>
+<p><strong><em>Sky Titans.</em></strong> In the ancient days when giants
+battled dragons for control of the world, Annam, the father of the giant
+gods, created the rocs so that his worshipers might challenge the
+dragons' dominance of the air.</p>
+<p>When the war ended, the rocs were freed from giant domination and
+spread throughout the world.</p>
+<p>Though cloud giants and storm giants sometimes tame these great
+birds, rocs treat even giants as potential prey. They fly great
+distances in search of food, soaring high above the clouds to reach
+their favored hunting grounds. A roc seldom hunts swift or small
+creatures, and it ignores towns and forests where prey can easily take
+cover. When it locates a large and slow-moving target such as a giant, a
+whale, or an elephant, a roc dives down to snatch its prey in its
+massive talons.</p>
+<p><strong><em>Remote and Alone.</em></strong> Rocs are solitary
+creatures that can live for centuries. They lair in nests made from
+trees, tents, broken ships, and the remains of caravans they carry off,
+placing these massive tangles in mountain clefts out of the reach of
+lesser creatures.</p>
+<p>Sometimes a roc's nest contains treasures from the caravans or ships
+they raid, but these creatures are heedless of such baubles. More
+rarely, a nest holds eggs that are taller than a human, produced by the
+rocs' infrequent mating.</p>
+</body>
+</html>

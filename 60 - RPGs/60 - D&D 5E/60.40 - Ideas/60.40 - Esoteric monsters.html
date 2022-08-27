@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.40 - Esoteric monsters</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<h1 id="esoteric-monsters">Esoteric monsters</h1>
+<p>This is a system of templates to makes monsters more dangerous,
+unique and memorable. In essence, it makes them exceedingly hard to
+damage outside of a specific <strong>esoteric weakness</strong>. Battles
+with this monsters often play out as one part fight and one part puzzle
+- tackling these monsters without research and preparation is often all
+but impossible and they should not be carelessly unleashed on an
+unprepared party.</p>
+<p>Remember, it is up to the DM to make the encounter possible by
+providing the tools and clues to win.</p>
+<h2 id="immunity-grade">Immunity Grade</h2>
+<p>The first element of an Esoteric Monster is to make it far harder to
+kill with traditional means. This is a template placed on top of the
+monster's other stats, and comes in the levels found below. In the
+following table "DR" stands for "Damage Reduction"; damage reduction is
+a rarely used mechanic in 5e (for good reason) but is appropriate for
+what we are trying to do here, and is subtracted from any damage done to
+a creature before any other effect takes place.</p>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 92%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Immunity Grade</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Low</td>
+<td>The creature has a DR of 10.</td>
+</tr>
+<tr class="even">
+<td>Moderate</td>
+<td>The creature has immunity to bludgeoning, piercing and slashing
+damage, a DR of 15, immunity to spells 5th level or below, and Legendary
+Resistance equal to its proficiency bonus.</td>
+</tr>
+<tr class="odd">
+<td>Absolute</td>
+<td>The creature has immunity to all damage types, is immune to all
+magic effects, and has unlimited use of Legendary Resistance.</td>
+</tr>
+</tbody>
+</table>
+<p>Magic Resistance grants advantage on saving throws against magical
+effects. The purposes of Immunity Grade, magical effects include effects
+from Magic, Spells, Psionics, Ki, and other supernatural sources.</p>
+<h2 id="esoteric-weakness">Esoteric Weakness</h2>
+<p>At the heart of this concept and style of design is that these
+creatures possess a fatal flaw that renders them vulnerable. An esoteric
+weakness can range from a convenient way to bring down the monster to
+the only real way to harm the creature.</p>
+<p>You can roll from the table below, or select one that is appropriate
+to the creature (or even make your own that fits the creature and
+narrative!)</p>
+<table>
+<thead>
+<tr class="header">
+<th>d20</th>
+<th>Esoteric Weakness</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Standing in moonlight.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Weapons forged more than 100 years ago.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Called shots targeting their ankle.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Poison from Foxglove flowers.</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Divination magic.</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Mithral weapons</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Acid damage</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Silvered weapons.</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Environmental damage.</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Piercing damage from a good aligned creature.</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>A weapon of significance to the creature</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Thunder damage.</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>A damage type the creature has never taken.</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>Damage dealt during the creature's turn.</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>Weapons covered in blood.</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>Extra planar creatures.</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>Damage dealt by creatures that cannot see it.</td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>A specific spell created to defeat it.</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>Any damage for a round after speaking its true name</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>A specific artefact.</td>
+</tr>
+</tbody>
+</table>
+<p>Damage dealt in the condition that matches a creature's weakness
+bypasses it's immunity grade effects. For example, if a creature's
+esoteric weakness is moonlight, if it takes damage while in direct
+moonlight, it would be vulnerable to that damage and that damage would
+bypass it's immunity grade.</p>
+<p>A creature's vulnerability to its weakness is inversely proportional
+to it's immunity grade; a creature always has vulnerability to damage
+dealt in a way that matches its weakness, but a creature with a moderate
+or absolute immunity grade additionally treats any damage dealt by it as
+an automatic critical hit.</p>
+<h2 id="source-of-power">Source of Power</h2>
+<p>One consideration that should always come up in this sort of
+encounter is the source of the monster's immunity grade, esoteric
+powers, and esoteric weakness.</p>
+<p>For a low immunity grade, perhaps it is a goblin that blessed (or
+cursed) by a powerful fey or spirit. This sort of fight can be overcome
+without learning its weakness (as long as the immunity grade is low). An
+absolute immunity grade is usually the boon of a god and is often given
+to a suitably epic recipient, though not always. An encounter against a
+goblin Achilles with an Absolute immunity grade would be memorable!</p>
+<p>Other frequent sources include beings from the far realm to which
+normal logic does not apply, fey creatures that follow their own rules,
+or "a wizard did it".</p>
+<h2 id="clues">Clues</h2>
+<p>A critical part of running an esoteric monster is cluing the party
+into the fact that you are running an esoteric monster. The first time a
+monster like this is used, it's not a bad idea to simply tell the
+players (particularly ones familiar with 5e combat) that they will
+encounter a monster that follows unique rules and warn them they will
+need additional information to fight the monster.</p>
+<p>You can (and should) offer less fourth wall breaking clues. Terrified
+tales of a creature that cannot be injured. Reports of arrows bouncing
+off it harmlessly, it leaping through walls of fire unscathed, etc.</p>
+<p>A popular technique is to let the party fight it briefly, but have it
+disengage, running away - it is not interested in the party. They may
+choose to hunt it, but if they wish to, they'll have to figure out why
+their attacks seemed to do nothing to it.</p>
+<h2 id="challenge-rating">Challenge Rating</h2>
+<p>The challenge rating system provides no real tools for engaging a
+monster like this, as it's challenge rating is intentionally excessive
+when its weakness is unknown, and often weaker than its more mundane
+counterparts should the players be prepared for it. This template has no
+standardised impact on the creature's CR.</p>
+<p>That said, a DM should consider that these fights have an extra
+element of challenge to them that is not reflected in the CR system and
+take that into consideration when deploying monsters of this type.</p>
+<h2 id="special-powers">Special Powers</h2>
+<p>The following are not necessarily to build an esoteric monster, but
+can add to the challenge and serve as the basis for making the monster a
+larger threat, or more difficult to deal with. Some groups may have
+little trouble dealing with a monster that is simply hard to kill, so
+adding a few of these can ensure that an esoteric monster remains an
+appropriate challenge. You can either roll on the table, or select
+powers that may vex your player's favourite tactics:</p>
+<table>
+<colgroup>
+<col style="width: 0%" />
+<col style="width: 99%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>d8</th>
+<th>Special Powers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>At the start of each of its turns, the creature teleports 5 feet in
+a direction of its choosing.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>As a reaction to taking damage that doesn't trigger its esoteric
+weakness, the monster enters the ethereal plane until the start of its
+next turn.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>The creature can add double its proficiency bonus to athletics
+checks, and can contest a grapple check at the start of its turns
+without expending an action.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>The creature is exudes a supernaturally terrifying presence. Any
+creature that starts its turn within 30 feet of the esoteric creature
+while being able to see it must make a Wisdom saving throw (DC 8 + [2 x
+the creature's proficiency bonus]) or become frightened until the start
+of their next turn.</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>The creature gains the ability to cast any spell cast within 60 feet
+of it, gaining one use of that spell it can cast without expending a
+spell slot, mimicing the casters spell casting modifiers.</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>After a creature takes damage of a damage type not of its esoteric
+weakness, it absorbs further instances of that damage type until the
+start of its next turn (regaining hit points equal to the damage taken
+from it).</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>The creature is always invisible.</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>The creature gains a number of Legendary Actions equal to half its
+proficiency bonus (rounded up) that it can use to make a single attack
+available to it or move up to its movement speed (this should not be
+applied to monsters that already have Legendary Actions).</td>
+</tr>
+</tbody>
+</table>
+<p><a
+href="https://www.reddit.com/r/DnDBehindTheScreen/comments/jvq28l/esoteric_monsters_a_set_of_dm_mechanics_for/">Source</a></p>
+</body>
+</html>

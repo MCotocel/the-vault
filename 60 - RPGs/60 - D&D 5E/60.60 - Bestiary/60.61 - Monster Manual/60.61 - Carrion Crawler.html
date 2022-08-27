@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.61 - Carrion Crawler</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<hr />
+<blockquote>
+<h2 id="carrion-crawler">Carrion Crawler</h2>
+<p><em>Large monstrosity, unaligned</em> <strong><em> - <strong>Armor
+Class</strong> 13 (natural armor) - <strong>Hit Points</strong> 51 (6d10
++ 18) - <strong>Speed</strong> 30 ft., climb 30 ft. </em></strong>
+|STR|DEX|CON|INT|WIS|CHA| |:---:|:---:|:---:|:---:|:---:|:---:| |14
+(+2)|13 (+1)|16 (+3)|1 (-5)|12 (+1)|5 (-3)| <strong><em> -
+<strong>Skills</strong> Perception +3 - <strong>Senses</strong>
+darkvision 60 ft., passive Perception 13 - <strong>Languages</strong> —
+- <strong>Challenge</strong> 2 (450 XP) - <strong>Proficiency
+Bonus</strong> +2 </em></strong> <strong><em>Keen Smell.</em></strong>
+The carrion crawler has advantage on Wisdom (Perception) checks that
+rely on smell.</p>
+<p><strong><em>Spider Climb.</em></strong> The carrion crawler can climb
+difficult surfaces, including upside down on ceilings, without needing
+to make an ability check.</p>
+<h3 id="actions">Actions</h3>
+<p><strong><em>Multiattack.</em></strong> The carrion crawler makes two
+attacks: one with its tentacles and one with its bite.</p>
+<p><strong><em>Tentacles.</em></strong> <em>Melee Weapon Attack:</em> +8
+to hit, reach 10 ft., one creature. <em>Hit:</em> 4 (1d4 + 2) poison
+damage, and the target must succeed on a DC 13 Constitution saving throw
+or be poisoned for 1 minute. Until this poison ends, the target is
+paralyzed. The target can repeat the saving throw at the end of each of
+its turns, ending the poison on itself on a success.</p>
+<p><strong><em>Bite.</em></strong> <em>Melee Weapon Attack:</em> +4 to
+hit, reach 5 ft., one target. <em>Hit:</em> 7 (2d4 + 2) piercing
+damage.</p>
+</blockquote>
+<h2 id="carrion-crawler-1">Carrion Crawler</h2>
+<p>Carrion crawlers scour putrid flesh from carcasses and gobble the
+slimy bones that remain. They aggressively attack any creature that
+trespasses on their territory or disturbs their feasting.</p>
+<p><strong><em>Carrion Eaters.</em></strong> A carrion crawler follows
+the scent of death to its food, but it prefers not to compete with other
+scavengers. These foul creatures thus hunker down in territories where
+death is plentiful and other carrion eaters have limited mobility.
+Caves, sewers, dungeons, and forested marshes are their favored lairs,
+but carrion crawlers are also drawn to battlefields and cemeteries. A
+carrion crawler roams on the hunt, its tentacles probing the air for the
+scent of blood or decay. In tunnels or ruins, carrion crawlers scurry
+across the ceiling as they move toward food. In this way, they avoid
+contact with oozes, otyughs, and other dangerous inhabitants of the
+darkness, even as they surprise potential meals that don't think to look
+up.</p>
+<p><strong><em>Patient Predators.</em></strong> Whether in subterranean
+darkness or while hunting at night, light signals a potential meal. A
+carrion crawler might follow a light source from a distance for hours,
+hoping to pick up the scent of blood. Despite their great size, carrion
+crawlers can also easily set up ambushes by waiting around blind corners
+for prey to come to them. When facing potential prey or intruders, a
+carrion crawler lets its poison do the work. Once a victim goes rigid
+with paralysis, the carrion crawler wraps it with its tentacles and
+drags it away to a high ledge or isolated passageway, where it can be
+killed safely. The monster then resumes patrolling its territory while
+waiting for its meal to ripen.</p>
+</body>
+</html>

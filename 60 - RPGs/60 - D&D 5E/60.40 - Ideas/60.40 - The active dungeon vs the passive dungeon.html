@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.40 - The active dungeon vs the passive dungeon</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<h1 id="the-active-dungeon-vs-the-passive-dungeon">The active dungeon vs
+the passive dungeon</h1>
+<h2 id="passive">Passive</h2>
+<p>The passive dungeon is what I’d say the majority of dungeons are.
+They are locations in the world that the players can explore and engage
+with, fighting enemies, avoiding obstacles, disarming traps, all that
+sort of stuff. ‘Passive’ here doesn’t mean that the dungeon is peaceful
+and devoid of combat, it means that the dungeon largely exists in a
+state agnostic of the party’s presence there.</p>
+<h2 id="active">Active</h2>
+<p>The active dungeon is, by comparison, a dungeon that is actively
+responding to the players as they traverse it. A great example of this
+is raiding a necromancer’s castle in a multi-day military-style
+operation. The party is trying to slog through each room, clearing it
+out and securing vital objectives, while at the same time the
+necromancer is trying to actively oppose the party by throwing enemies
+at them and creating obstacles to impede or entirely prevent the party’s
+progress.</p>
+<h2 id="active-aggressive">Active Aggressive</h2>
+<p>I don’t want to talk too much about the passive dungeon as it’s the
+one we’re generally most familiar with. Instead I want to break down
+exactly what sorts of things go on in active dungeons before we look at
+the pros and cons of each.</p>
+<p>In general, the challenges of an active dungeon all spring from the
+underlying fact that something elsewhere in the dungeon (probably the
+thing the party is trying to get to and destroy) is actively and
+continuously trying to counteract the party’s actions.</p>
+<p>Most monster lairs fall into this category, as in theory there is an
+occupant that is actively trying to kill the party just as the party is
+actively trying to kill it.</p>
+<p>In the example given of clearing a castle occupied by a necromancer
+combats will naturally be against their hordes of undead. Then once a
+room is cleared out the necromancer may try to actively take it back by
+sending more undead at the party.</p>
+<p>As the party progresses they may come across booby traps that have
+been specifically built to stop the party from getting further. This
+plays out less like the classic ‘swinging blades in a corridor’ and more
+like a siege with the defenders taking countermeasures. Doors may be
+rigged to explode, water sources may be poisoned, staircases may have
+been intentionally destroyed.</p>
+<p>Then there are factors like the party having to securely find ways to
+rest. There’s always the general wisdom of ‘the monsters won’t just wait
+around while the party rests’, but this goes a step beyond that. The
+monsters may actively wait for the party to need to rest and try to
+ambush them in their sleep. This creates an arms race of the party
+needing to create secure locations to rest, with the denizens of the
+dungeon trying to make such places impossible to create or counter
+whatever measures the party puts in place to enable their rest.</p>
+<p>The active dungeon is almost more like a tactical game between the
+party and the dungeon’s occupants, full of moves and countermoves. In
+clearing out the dungeon, the party has won a great protracted
+battle.</p>
+<h2 id="passive-in-brief">Passive In Brief</h2>
+<p>Where the active dungeon might be storming a necromancer’s castle,
+the passive dungeon is raiding the long-dead necromancer’s crypt. Booby
+traps may have been built to dissuade graverobbers, skeletons animated
+in centuries long past may be standing ready in rooms to guard the tomb,
+there may even be riddles that must be solved to prove the intruder is
+worthy of the deceased’s treasures.</p>
+<p>This dungeon has obstacles and it has things the party is actively
+engaging with, but the dungeon itself does very little in the ways of
+actively responding to the party aside from a few instances of enemies
+now aware of the party’s presence readying themselves for the party’s
+eventual arrival to their chamber.</p>
+<h2 id="the-pros-and-cons-of-each">The Pros and Cons of Each</h2>
+<p>I think it’s easy to read this and feel active dungeons are probably
+better than passive dungeons since they’re more ‘alive’, and having a
+dungeon actively responding to the party’s actions can make it feel more
+bespoke, but there’s a lot to be said in favour of passive dungeons.
+Let’s look at them both now.</p>
+<h3 id="active-dungeons">Active Dungeons</h3>
+<h4 id="pros">Pros</h4>
+<ul>
+<li>Provide out-of-combat strategic opportunities a layer above
+in-combat tactics</li>
+<li>The gameplay loop of moves and countermoves is generally
+satisfying</li>
+<li>Can have a strong sense of progression as earlier parts of the
+dungeon are made safer</li>
+<li>Generate satisfying conclusions as the party wins a war of
+attrition</li>
+</ul>
+<h4 id="cons">Cons</h4>
+<ul>
+<li>Can become a slog</li>
+<li>Leave little room for things like puzzles and riddles, which many
+players enjoy</li>
+<li>Combat-heavy and may have little variety as a result</li>
+<li>Require contrivances of intelligent enemies being holed-up in a
+location in order to function</li>
+</ul>
+<h3 id="passive-dungeons">Passive Dungeons</h3>
+<h4 id="pros-1">Pros</h4>
+<ul>
+<li>Can help create a sense of ‘deep history’ through forgotten ruins
+and ancient structures</li>
+<li>Extremely flexible in terms of accommodating a variety of
+challenges</li>
+<li>Can exist agnostic of faction politics</li>
+<li>Familiar (and by extension comfortable) to many players</li>
+</ul>
+<h4 id="cons-1">Cons</h4>
+<ul>
+<li>Often require contrivances to justify puzzles</li>
+<li>Seldom change the political landscape of a campaign once cleared
+(compared to something like clearing a town of an occupying army)</li>
+<li>Goals can become repetitive (i.e. an endless string of ‘go here,
+retrieve this treasure’)</li>
+</ul>
+<p><a
+href="https://www.reddit.com/r/DnDBehindTheScreen/comments/fusz92/the_active_dungeon_vs_the_passive_dungeon/">Source</a></p>
+</body>
+</html>

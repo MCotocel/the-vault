@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.40 - A system for stealth missions</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<h1 id="a-system-for-stealth-missions">A system for stealth
+missions</h1>
+<p>Stealth and infiltration missions are fun in video games, but are
+more difficult to implement in D&amp;D.</p>
+<p>In video games, stealth usually goes something like this:</p>
+<ul>
+<li>You find your target, observe the guard patrols, and plan out my
+path into the base.</li>
+<li>You immediately blow my cover by throwing a hunk of meat at a guard
+instead of assassinating him.</li>
+<li>You ditch stealth in favour of just gunning down anything that
+moves.</li>
+</ul>
+<p>In D&amp;D, this is the equivalent of failing the first stealth check
+and the whole party immediately giving up on any plans they might have
+had in favour of a drawn out combat encounter. This can be less fun for
+a few reasons:</p>
+<ul>
+<li>A single failed check ruined the entire plan.</li>
+<li>The players felt like tactical geniuses and now they do not.</li>
+<li>There is no recovery; you’ve been spotted once and now all of China
+knows you’re here.</li>
+</ul>
+<p>The way to solve this is by using an Alarm Levels system. The alarm
+system represents the guards’ increasing suspicion and panic, as well as
+their increasingly drastic attempts to put a stop to the characters.
+Each mission starts at Alarm Level 0, and escalates up to alarm level 6.
+It takes 5 points to reach the next level. At the end of every round, a
+point is added. Every time a character is detected, a point is added.
+Other things, like setting off sensors or killing guards, also add
+points. Every time the alarm level increases, a new threat is
+introduced, such as additional guard patrols or new cameras going
+online.</p>
+<p>The Alarm system achieves two things:</p>
+<ul>
+<li>It provides a system to steadily increase urgency and tension both
+narratively and mechanically. It does this in response to both the
+passage of time and specific character actions.</li>
+<li>It makes it so that mistakes have specific, meaningful consequences
+without being overly punishing. Players are rewarded for adaptability,
+while not being punished so harshly for taking risks.</li>
+</ul>
+<h2 id="step-1-creating-triggers">Step 1: Creating Triggers</h2>
+<p>First, you need to assign point values to different triggers. For
+example, failing a Deception check will increase suspicion by a
+significant amount, so you can say that that event adds a point of
+suspicion to the alarm level. Overtly hostile actions, however, should
+raise the alarm level at a much more dramatic rate, so you can assign
+higher point scores to those triggers. Here’s a good list of
+triggers.</p>
+<ul>
+<li>Failed Stealth, Sleight of Hand, or Deception check (1 Point)</li>
+<li>End of any combat round (1 Point)</li>
+<li>Caught in a restricted area (2 Points)</li>
+<li>Unconscious body found (2 Points)</li>
+<li>Murder witnessed/Dead body found (4 Points)</li>
+</ul>
+<p>You can add as many or as few specific triggers as you want. You can
+of course just add points on the fly as you see appropriate, but it’s
+more helpful for the players to know exactly what they’re working with.
+This lets them make calculated risks and get tactical with their
+decision making.</p>
+<h2 id="step-2-creating-threats">Step 2: Creating Threats</h2>
+<p>Each time the alarm level increases, a new threat is introduced to
+the situation. They start small at first, but grow more severe the
+higher the alarm level. It's a good idea to keep these a secret from the
+players until they happen. Here’s an example.</p>
+<p>Alarm Level Threats:</p>
+<ul>
+<li>Level 0: Everything is operating as normal.</li>
+<li>Level 1: Guards are slightly more suspicious: +1 DC to checks
+against them.</li>
+<li>Level 2: An additional guard patrol arrives.</li>
+<li>Level 3: The director is alerted and all patients are sent to
+rooms.</li>
+<li>Level 4: The facility is locked down and an additional guard patrol
+arrives.</li>
+<li>Level 5: The director scrys on the party, revealing their current
+location to all guards.</li>
+<li>Level 6: A pair of CR 5 Blood Hunters arrive and close on the
+party’s location.</li>
+</ul>
+<p>There can be any number of Alarm levels, but 6 works well. Levels 1
+and 2 are fairly relaxed, the characters are taking their time and
+exploring the facility, and security is unaware of their presence.
+Levels 3 and 4 put some more pressure on the party by changing the
+situation in some way. Players and characters are starting to make some
+mistakes and take some risks, the party is getting closer to its goal,
+and security is aware that there is some sort of threat. By levels 5 and
+6, it’s go time. The party is sprinting instead of sneaking, their
+location is being compromised, and they’re starting to take more
+desperate risks. Security is fully aware of the threat and are becoming
+more and more equipped to deal with it. Hitting alarm level 6 is a great
+dramatic moment. When each alarm level hits, narrating a little cutscene
+of the new threat really sells the rising urgency.</p>
+<p><a
+href="https://www.reddit.com/r/DnDBehindTheScreen/comments/l2a8pm/a_system_for_making_stealth_and_infiltration/">Source</a></p>
+</body>
+</html>

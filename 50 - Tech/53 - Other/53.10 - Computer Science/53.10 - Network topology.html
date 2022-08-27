@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>53.10 - Network topology</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="school-tech">school #tech</h1>
+<ul>
+<li>Network topologies are different connections between devices on a
+network</li>
+<li>Bus topology:
+<ul>
+<li>A single cable to which every device is connected</li>
+<li>Messages are sent along the cable</li>
+<li>At the end there is a terminator to prevent signals from bouncing
+back</li>
+<li>Only one computer can transmit a packet at a time</li>
+</ul></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cheaper</td>
+<td>More collisions</td>
+</tr>
+<tr class="even">
+<td>Easy to install</td>
+<td>Main cable damaged, whole network fails</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>All workstations see the others</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Difficult to identify where fault is</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Ring topology:
+<ul>
+<li>All devices are connected to the next device in a loop</li>
+<li>The are no collisions</li>
+</ul></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adding more devices doesn't affect traffic</td>
+<td>Main cable damaged, whole network fails</td>
+</tr>
+<tr class="even">
+<td>Easy to install</td>
+<td>Difficult to identify where the fault is</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>New devices requires network to be shut down</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>More expensive than bus</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Star topology
+<ul>
+<li>All devices are connected to a central hub</li>
+<li>The hub directs messages between devices</li>
+</ul></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 63%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A damaged cable won't prevent other devices from functioning</td>
+<td>If the hub fails, the network fails</td>
+</tr>
+<tr class="even">
+<td>If a switch is used the network is more efficient</td>
+<td>Expensive</td>
+</tr>
+<tr class="odd">
+<td>East to locate faults</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>New devices can be added with no downtime</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Mesh topology
+<ul>
+<li>All devices are connected to at least one other device, sometimes
+all of them</li>
+</ul></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Advantages</th>
+<th>Disadvantage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fault tolerant</td>
+<td>Expensive and complex</td>
+</tr>
+<tr class="even">
+<td>High performance</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Nodes extend range</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Data can be transmitted simultaneously</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

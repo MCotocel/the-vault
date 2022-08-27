@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.40 - Keeping Combat Short and to the Point</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<h1 id="keeping-combat-short-and-to-the-point">Keeping Combat Short and
+to the Point</h1>
+<h2 id="not-a-combat-faq">Not-a-combat-FAQ</h2>
+<p>This is not really meant to be an FAQ for combat. However, something
+has struck me in answering questions from new DMs, and that's really the
+inspiration for this whole semi-organized post.</p>
+<p>Some common questions from new DMs regarding combat include:</p>
+<ul>
+<li>How do I make combat interesting?</li>
+<li>My players are bored with combat, what do I do?</li>
+<li>Combat seems pointless, what do I do?</li>
+<li>Is this encounter balanced for a party of level X?</li>
+<li>What if I kill my party?</li>
+<li>Help! I want to run a huge battle, how do I do this?</li>
+</ul>
+<p>I often find that the way I answer these questions converges on a
+singular solution: keep combat short, but interesting.</p>
+<p>The two big things that I keep in mind to help me keep things
+interesting are: (#1) identify the purpose of the combat and (#2) do NOT
+let combat drag on. Because I'm talking about combat, I'll also add a
+few thoughts about the reasons why I say
+to-hell-with-worrying-too-much-about-balance and how I run large-scale
+battles.</p>
+<h2 id="what-are-we-fighting-for">What are we fighting for?</h2>
+<p>When prepping an encounter for an adventure, I think about the
+following questions. Even if it's an improvised or random wandering
+monster-type encounter, I think about these questions for at least a
+moment before starting the fight:</p>
+<h3
+id="why-would-the-monsters-fight-the-pcs-why-would-the-pcs-fight-the-monsters">Why
+would the monsters fight the PCs? Why would the PCs fight the
+monsters?</h3>
+<ul>
+<li>Is there antipathy between the monsters and the PCs?</li>
+<li>Are the monsters known to be members of a rival faction?</li>
+<li>Are the monsters hungry?</li>
+<li>Are the PCs slightly evil?</li>
+<li>Are the PCs or the monsters bent on self-destruction?</li>
+</ul>
+<h3 id="what-are-the-monsters-doing-when-the-pcs-encounter-them">What
+are the monsters doing when the PCs encounter them?</h3>
+<ul>
+<li>The giant spider is repairing her web after a storm.</li>
+<li>The giant spider is hunting for small game.</li>
+<li>The giant spider is sleeping after a big meal.</li>
+</ul>
+<h3
+id="what-would-the-monsters-be-doing-if-the-pcs-never-showed-up">What
+would the monsters be doing if the PCs never showed up?</h3>
+<ul>
+<li>The giant spider would be going about her business, not looking for
+food because she ate recently.</li>
+<li>The giant spider would be tucking in to drain the juices from that
+halfling she caught yesterday.</li>
+</ul>
+<h3
+id="what-would-the-pcs-be-doing-if-they-didnt-run-into-the-monsters">What
+would the PCs be doing if they didn't run into the monsters?</h3>
+<ul>
+<li>If mission objective X [such as escort Bob the NPC from point A to
+point B] is more important than killing a random giant spider, the PCs
+may just avoid the spider rather than try to kill her.</li>
+</ul>
+<p>Now that I have established some purposes for the fight (if a fight
+even occurs), it will be easier to make the fight a part of the story
+rather than an interruption to the story.</p>
+<h2 id="is-the-battle-lost-or-won">Is the battle lost or won?</h2>
+<p>After each round, ask:</p>
+<p>Is one side badly beaten?</p>
+<ul>
+<li>If YES, then end combat.</li>
+<li>If NO, then run another round of combat.</li>
+</ul>
+<p>Some may ask, how do I end combat if there are combatants that are
+still above 0 hp? To which I respond with another question, how do most
+fights end? In most animals - dogs, mountain goats, grizzly bears,
+elephant seals, even humans - , instances of aggression only rarely end
+with the death of an individual. Most of the time, one individual slinks
+away when it is badly beaten or it submits to the other. Many monsters
+and enemies will behave the same way. Fighting is dangerous. Any
+individual interested in surviving is more likely to run away than go
+toe-to-toe with someone or something that is clearly better equipped for
+violence.</p>
+<p>So I try to think about potential outcomes other than death:</p>
+<h3 id="flight-and-pursuit">Flight and pursuit</h3>
+<p>What are the immediate consequences if the remaining monsters/PCs
+fleeing? Can the monsters or PCs actually escape or are they trapped or
+do they run into something else?</p>
+<h3 id="surrender-and-captives">Surrender and captives</h3>
+<p>What do the monsters/PCs do with foes that surrender? How does the
+action wrap up? What are some of the PCs next possible actions? Can they
+sell information or treasure for their freedom? Can the PCs afford to
+leave the monsters alive? What are the consequences of releasing or
+killing the prisoners?</p>
+<h3 id="to-the-death">To the death</h3>
+<p>How does the action wrap up if the monsters/PCs want to fight to the
+death in a hopeless situation? Even if the last two of a dozen gnolls
+keep fighting, you don't have to roll the last few rounds it takes to
+finish them off. Just tell the PCs: You corner the last two gnolls. They
+are still snarling and slashing at you, despite being outnumbered and
+outclassed. How do you want to finish them off? Let them describe the
+action without rolling dice then move on with the adventure.</p>
+<h3 id="shaking-things-up">Shaking things up</h3>
+<p>If the PCs and the monsters are pretty evenly matched after
+<sub>3</sub> rounds, I will think about:</p>
+<ul>
+<li>Will the monsters flee anyways for the sake of self-preservation?
+They won't surrender if they are not definitively losing, but they might
+run. The goblins, not interested in a tough fight, hightail it down a
+passage to your left.</li>
+<li>How can I shake things up with the arrival of more enemies or an
+ally or two? This might tip the scales of the battle. The guards from
+north watchtower race down the steps to join their comrades defending
+the gate.</li>
+<li>How can I shake things up with the arrival of a large predator, a
+weather or terrain hazard, or third fighting force that threatens both
+the PCs and the monsters. Several of the lizardfolk warriors scamper
+into the copse of mangroves as a hydra erupts from the swamp water
+before you.</li>
+</ul>
+<p>The goal is to transform the fight. The fight goes from what might
+have turned into a many-round slugfest into something else entirely. I
+don't do this every time the sides are evenly matched after a few
+rounds, but I do it frequently, and as long as you don't use the same
+type of shake-up, the players aren't likely to catch on that you hadn't
+planned it that way from the beginning. Then I let the battle continue
+for another round or two and ask the question again, Is one side badly
+beaten?</p>
+<p>Basically, I keep combat interesting by understanding its place in
+the ongoing story and by keeping it brief. I typically only let it go on
+for 2-3 rounds (sometimes only 1 round, occasionally more for important
+villains), and then we are back to the story (which might include
+quickly moving on to the next combat against different monsters in a
+different location).</p>
+<h2
+id="how-i-learned-to-stop-worrying-about-balance-and-love-the-battle">How
+I learned to stop worrying about balance and love the battle</h2>
+<p>By keeping combat encounters short as I've outlined above, I
+generally don't have to worry about balance for a number of reasons:</p>
+<h3 id="interesting-story-outcomes">Interesting story outcomes</h3>
+<p>There are many outcomes of combat other than death, and many of these
+outcomes are opportunities to build your world and to develop stories
+around NPCs and monsters. If you spent a little time thinking about why
+a fight is happening, you'll have some thought as to what happens if one
+side flees or surrenders.</p>
+<h3 id="its-okay-to-kill-pcs">It's okay to kill PCs</h3>
+<p>If the PCs are severely overmatched, I don't sweat it. I end combat
+some way other than death (flight, surrender, etc.). Sometimes, one or
+more PCs will die. It's ok to kill PCs, especially if they are being
+stupid. The key is that you make character death part of the story. PC
+deaths can be heroic, tragic, or absurd and hilarious. I would not
+recommend always killing PCs, but when it happens, make it fun. And
+always highlight to the player that a death means they have an
+opportunity to step into a new role. I often ask that my players keep a
+second PC ready-to-go at party level or one level lower, so the
+understudy can step up in the event of a death. This saves a lot of time
+if a PC death happens early in a session.</p>
+<h3 id="its-okay-for-the-players-to-feel-like-super-heroes">It's okay
+for the players to feel like super-heroes</h3>
+<p>If the monsters are severely overmatched, I don't sweat it, but I try
+to use tougher monsters or more monsters next time. If the PCs cut
+through the enemies much more quickly and easily than I expected, it
+helps the players feel like their PCs are awesome and powerful. I would
+not recommend always having encounters that are too easy, but when it
+happens, make it fun. Let the players narrate how they finish off the
+stragglers. Make the monsters run away and see what the PCs do. (Do the
+PCs charge after the fleeing goblins recklessly? There might be
+something else out there...)</p>
+<p>When I figured this out, I felt incredibly stupid for the hours and
+days I had spent labouring over stat blocks and numbers in preparing for
+sessions. I can't get those hours and days back, but maybe I can save
+you some of the trouble. Don't be stupid and think an adult green dragon
+won't kill a party of level 2 PCs (it will), but you can get creative
+with how a party of level 2 PCs might interact with one, and you can
+kill one stupid PC to put the fear of the gods into the players. If your
+campaign world is dangerous and frightening, show them how frightening
+it can be.</p>
+<h2 id="large-scale-battles-make-them-smaller">Large-scale battles: Make
+them smaller</h2>
+<p>If you are planning a massive siege or meeting of two armies, you
+could run an entire session as a single epic battle. But I would not run
+it is a never-ending series of turns and moves and attacks and whatnot,
+nor would I include every single combatant. Let me repeat that: I do NOT
+include every single combatant in a large battle. I only run the
+combatants with whom the PCs directly interact. Running every combatant
+will slow things down way too much. It will become boring for the
+players while you the DM roll several dozen times attack rolls and
+damage rolls. When I first started DMing I would run battles with a
+dozen monsters, a half-dozen allied NPCs, and the PCs, and it was
+horrible.</p>
+<p>So what I do to make this work, keep things moving, and capture the
+feel of a large-scale battle? I run large-scale battles as lots of short
+encounters with many other battle-related tasks happening in between. A
+battle in the story may involve hundreds or thousands of critters or
+warriors, but the mechanical dice-rolling is kept to only a handful of
+enemies against the PCs. Additionally, I keep the narration fun by using
+flavorful mooks and minions to make a fight with a dozen thieves,
+soldiers, or cultists feel like you are fighting individuals instead of
+a mob of matching Stormtroopers.</p>
+<p>Some tasks PCs might perform in an epic battle:</p>
+<ul>
+<li>Strategic decisions for commanding troop positioning and
+movements.</li>
+<li>Rescuing an ally who is surrounded.</li>
+<li>Running across the field to reinforce a redoubt.</li>
+<li>Finding planks and furniture to reinforce a gate or door.</li>
+<li>Scraping together some parts to repair a huge catapult.</li>
+<li>Quickly digging a trench or erecting a barricade.</li>
+<li>Burning a bridge or blasting a tunnel to seal it off.</li>
+<li>Choosing to do one of these tasks at the expense of doing
+another.</li>
+</ul>
+<p>I'd set up a scoreboard or tracker that would reflect how the battle
+is going for the different factions until you reach the final tipping
+point confrontation. I wouldn't necessarily show the score to the PCs,
+but in narration, I'd make it clear which side is doing well and which
+side is doing poorly. Finally, thinking back to the purpose of the
+battle, I'd think about one or more other conditions for victory or
+specific events that mark one side has won or lost. These are things
+that happen automatically when the battle ends OR that end the battle
+when they happen.</p>
+<p>Here's are some specifics on how I do this:</p>
+<p>### Battle tracker</p>
+<p>A simple battle tracker starts at 0 and moves in 1-2 point increments
+as the PCs complete tasks, win short combat encounters, or fail at
+them.</p>
+<p>### Victory conditions</p>
+<p>The "good guys" win the grand battle when the tracker reaches +10 and
+the "bad guys" win the grand battle when the tracker reaches -10.
+Winning might mean surrender or it might mean one side's forces break
+and flee.</p>
+<p>### Events and outcomes</p>
+<p>What happens when the battle is lost or won? How might the battle be
+lost or won in a single act? This could include the death of a commander
+or breaching an inner chamber. One of these events may happen when the
+tracker reaches +10 or -10, or it may happen irrespective of the tracker
+if it makes sense based on the PCs' decisions.</p>
+<p>### Combat encounters</p>
+<p>If the PCs smash their way through a short combat encounter quickly,
+the tracker might get +1 or +2. If the PCs struggle through a short
+combat encounter, the tracker might get -1 or -2. If the PCs decide to
+perform a command- or strategy-related task, the tracker moves based on
+how well.</p>
+<p>### Other tasks</p>
+<p>If the PCs attempt to hastily build a barricade, but roll poorly on
+strength and carpentry checks to do the building, the tracker might get
+-2 (lost time and a poor barricade). If the PCs are successful in
+building a barricade, but it takes a long time, the tracker might get +0
+(a good barricade, but lost ground elsewhere). If PCs can get the
+barricade built quickly and well, the tracker might get +2.</p>
+<p>### Other combatants</p>
+<p>I will often roll a d20 once during the enemy combatants' turn - or
+whenever the PCs are performing a battle-related non-combat task - to
+determine how the rest of the battle is going. On a result of 16-20, the
+tracker gets +1; on a result of 1-5, the tracker gets -1. I might modify
+this roll based on how well the PCs are doing in combat or on the task.
+It's all a little arbitrary, but the point is, if the roll comes up low,
+I describe the PCs witnessing the enemy advancing or slaughtering an
+ally, or if the roll comes up high, I describe the PCs witnessing their
+allies doing well. This preserves the feel of a large-scale battle, but
+since the tracker is much more modified by what the PCs do than by the
+occasional d20 roll, they will feel like their contributions or failures
+are what turn the tide of the battle.</p>
+<p><a
+href="https://www.reddit.com/r/DnDBehindTheScreen/comments/3v4wwh/keeping_combat_short_and_tothepoint/">Source</a></p>
+</body>
+</html>

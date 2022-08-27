@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.40 - Adding horror to your game</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<h1 id="adding-horror-to-your-game">Adding horror to your game</h1>
+<h2 id="what-is-horror">What is Horror?</h2>
+<p>Horror is defined as an intense feeling of fear, shock, or disgust.
+It comes from the Latin horrere, which means to tremble or shudder - an
+important distinction, because this means horror is visceral and often
+involuntary. Unlike Intrigue, Horror is a reaction, not a process.</p>
+<p>A “Horror Campaign” will likely have a relentlessly grim tone and
+lots of gory monsters. While that sounds like an incredibly fun game to
+play in, we can use those elements to create moments of horror to
+punctuate otherwise upbeat campaigns.</p>
+<h2 id="three-types-of-horror">Three Types of Horror</h2>
+<p>There are many kinds of horror, but for the sake of symmetry and
+simplicity, it can be divided it into three rough categories, each
+eliciting a slightly different reaction.</p>
+<ul>
+<li>Atmospheric Horror (the Unknown) taps into your primal fears about
+darkness and the things you cannot see.</li>
+<li>Visceral Horror (the Unpleasant) taps into your primal fears about
+your body and the “right” way for living things to exist.</li>
+<li>Surreal Horror (the Unfathomable) taps into your primal fears about
+the existence and fragility of your reality itself.</li>
+</ul>
+<p>As you’ll see, these three categories often appear blended together
+or leading into one another. You might use Atmospheric Horror tactics to
+set up a big Surreal or Visceral reveal, for example.</p>
+<h2 id="atmospheric-horror-the-unknown">Atmospheric Horror (the
+Unknown)</h2>
+<blockquote>
+<p>“Oh, cool. A dark basement. I was just thinking we should be doing
+this in a dark basement.” -Jeff Winger.</p>
+</blockquote>
+<p>Atmospheric Horror is achieved mainly through description: a swinging
+lantern, a discordant melody, an uncomfortable silence. Atmospheric
+Horror is looking out your window in the middle of the night and
+swearing that you see a figure in the yard. As a DM, this type of horror
+provides the most bang for your buck, because its power lies in the
+realm of description and suspense. Nothing is happening - yet. And the
+monsters that players imagine will always be worse than the monster you
+put in front of them.</p>
+<p>Atmospheric Horror can be used alone just to set a mood, but it’s
+also an important setup for the other two types of horror discussed
+here. It’s also the most readily available and safest to use. At its
+core, atmospheric horror cannot hurt the players - if it does, then it
+stops becoming atmospheric, either becoming visceral horror or classic
+adventure combat. However, it may not be suitable for players with
+anxiety-related issues, so be wary.</p>
+<p>Examples in Media: The Shining, It Follows, Get Out, A Quiet Place
+(mostly). Atmospheric Horror usually serves as a double-feature with
+other types of horror described below.</p>
+<h3 id="how-to-use-atmospheric-horror">How to Use Atmospheric
+Horror</h3>
+<p>At the table, music can be a powerful tool to set the mood.
+Everything from subtle, ominous sounds to the Lavender Town theme song
+can be used to put players on edge.</p>
+<p>When it comes to the story, description is king. Atmospheric horror
+involves darkness, the unknown, and a sense of claustrophobia as the
+world tries to restrict the characters’ movement. Moreover, it typically
+involves something out of place--not where it should be. Something isn't
+quite right.</p>
+<p>Examples:</p>
+<ul>
+<li>The door creaks open, revealing only a dim stone chamber. The steady
+drip, drip, drip of water meets your ear.</li>
+<li>As you run your finger along the ground, a layer of grime clings to
+your skin. The wallpaper is yellow and peeling, drooping down toward you
+and making the room feel even smaller.</li>
+<li>The trees sway softly in the wind. You draw closer and find the
+remains of a squirrel - squashed and torn apart - nailed to one of the
+trunks. The wind whispers through the branches, rustling leaves. And
+then, abruptly, all goes still.</li>
+</ul>
+<h2 id="visceral-horror-the-unpleasant">Visceral Horror (the
+Unpleasant)</h2>
+<p>Visceral horror is your classic monsters, gore, and body horror.
+Fundamentally, it’s the horrible things that make us squirm. It’s the
+character's first sight of a Beholder. It’s finding a dead dwarf with
+half his skull missing and the brain sucked out like an oyster. It’s
+jumpscare and the maggots and the flesh-eating ghouls.</p>
+<p>Note: visceral horror runs the risk of becoming self-indulgent and
+genuinely upsetting for players. This type of horror requires a delicate
+hand, subtlety, and humility. Use with consent - knowing your players'
+boundaries - and use it sparingly.</p>
+<p>Examples: Alien, first and foremost. Just about anything with gore,
+plenty of gory horror movies and stories are out there.</p>
+<h3 id="how-to-use-visceral-horror">How to use Visceral Horror</h3>
+<p>Sparingly. Once more, the key lies in the description. This kind of
+horror generally lies in the places where things have gone wrong, or in
+well-recognised symbols of fear. For example: a creature with mouths
+where its eyes should be, or an eye where its mouth should be. The Alien
+from Aliens in all of its glory. The Nazis at the end of Raiders right
+as they’re melting (or the Nazis at the end of Last Crusade, right as
+he’s ageing). Leathery skin, exposed brains, tentacles, slime, etc.</p>
+<p>A gelatinous cube isn’t scary if you just describe it as a ten-foot
+cube. But start describing its slow, crawling movement, the
+half-dissolved face of a screaming corpse trapped in the gel, and the
+rigid, burning gel that engulfs a character, impeding their movement and
+cutting off their air? That’s pretty scary.</p>
+<p>Some DMs are masters of evocative word choice, horrifying sound
+effects, and grotesque metaphors. You can be more direct if you want to;
+imagining a horrifying image and then describing it in plain,
+straightforward language. Below are some examples.</p>
+<ul>
+<li>A mindflayer wraps its tentacles around a duergar's head as the
+dwarf twitches madly, his screams muffled. You hear a faint creaking
+sound, then a gut-wrenching snap. The duergar goes limp, followed by a
+loud sucking sound. The tentacles release and the body drops to the
+ground in a mangled mess.</li>
+<li>The jagged, blood-stained teeth sit on the lumpy creature’s stomach,
+while its head is a smooth mash of grey flesh. It lumbers toward you
+with the uncertain steps of a newborn baby, fleshy hands dragging
+against the ground.</li>
+<li>The hunched hag with mottled skin and ragged clothes has her back to
+you, revealing branches and rocks protruding from her flesh. Her head
+turns slowly to face you while the body stays in place. She grins madly.
+Suddenly she spins, bounding toward you, limbs flailing wildly as
+spittle flies from her teeth.</li>
+</ul>
+<p>The line between visceral and atmospheric is blurry at best. Spiders
+scurrying on the walls might be considered atmospheric, while a swarm of
+spiders crawling on a character is likely to feel visceral.</p>
+<h2 id="surreal-horror-the-unfathomable">Surreal Horror (the
+Unfathomable)</h2>
+<p>Surreal Horror is probably the most difficult form of horror to pull
+off - but the most rewarding if successful. It’s hard to pin down a
+definition. It’s when everybody on the street turns to stare at you for
+five seconds before going on their way like nothing happened. It’s when
+you trip on the street and fall into a non-Euclidean hellscape. It's the
+moment when you realise reality as you understand it is fundamentally
+broken.</p>
+<p>It is VERY hard to come back from true surreal horror that breaks
+reality, which is why it tends to work best in shorter-term games built
+expressly for that purpose (e.g. Call of Cthulhu). An easier option is
+to deploy a monster such as the False Hydra, which plays with memory and
+narrative itself. Deploying one such monster can irrevocably change the
+tone of a game, so be wary. Still, it's the kind of mind-bending horror
+I'd love to explore someday.</p>
+<p>Notably, this is also the form of horror closest to gaslighting, and
+so requires serious consideration and consent from players before
+engaging.</p>
+<p>Examples in Media: The Matrix, Total Recall, The Nine Million Names
+of God, I Have No Mouth and I Must Scream. Many episodes of The Twilight
+Zone, such as Time Enough at Last. The Truman Show kind of falls into
+this.</p>
+<h3 id="how-to-use-surreal-horror">How to use Surreal Horror</h3>
+<p>Surreal Horror is almost impossible to pull off alone; it’s best to
+use Atmospheric Horror tactics to set things up.</p>
+<h4 id="the-false-hydra">The False Hydra</h4>
+<p>The False Hydra is an aberration that is blocked from the memory of
+anybody who hears its eerie song. When it wants to eat, the Hydra
+extends one of its enormous necks, briefly stops singing its song, and
+chooses prey to target. Those who are eaten are completely wiped from
+memory.</p>
+<p>The design of the Hydra is already terrifying. A pale, swelling
+creature with snake-like necks and almost-human faces is horrible. Its
+source or seed can be a bulbous, cancerous growth that cannot move; the
+Hydra is rooted where it was born, and only its necks can move. Once
+characters realise the trick, they can find and kill the source, but
+it’s going to be a vile and revolting process filled with bursts of
+yellow blood, rubbery skin, and the overwhelming stench of rotten
+flesh.</p>
+<p>The moment of peak horror that you can use is this: once characters
+have pieced together the Hydra's ability, one or more of them cover
+their ears or cast Silence. Directly in front of them, now visible, are
+the horrific visage and enormous neck of one of the Hydra's heads - it
+has been watching and waiting the whole time. Alternatively, if the
+Hydra isn't attacking, they cover their ears and look out the window,
+seeing for the first time a half-dozen enormous necks spreading around
+the town. This is the peak Surreal moment, when characters realise the
+truth of the reality around them.</p>
+<p>How do you ramp up to this moment? You can do so by creating an
+unsettling Atmosphere.</p>
+<ul>
+<li>Hello Jack. I hope you’ve been well. Since you left Cobyr Square
+after HE your father’s death, the place has not been the same. I implore
+you to come and visit us once again. A IS bad case of insomnia has
+recently swept the city and it has affected WATCHING me as well despite
+my best efforts. I have not yet found a remedy for the ailment and I
+fear they it US may be a symptom for a larger problem. We could use
+someone with your expertise. God’s speed! Your friend, Tyrnan
+Altek.</li>
+</ul>
+<p>This tool sets up a dissonance in reality - two messages overlapping,
+one of them horrifying while the other is pleasantly plain. Other
+examples:</p>
+<ul>
+<li>The spot where the deaf beggar once sat is now long empty. His
+blanket and hat with a few silver pieces lie dormant. The party might
+notice how some folk will briefly stop at the site before walking on,
+confused only for a few seconds</li>
+<li>Players hear a scream from around the corner! When they arrive at
+the scene they just see a woman casually picking up some fallen apples
+from the ground and continue on her way as if nothing has happened.</li>
+</ul>
+<p>In this case, the horror doesn’t stem from the darkness or the grime
+- that is, it’s not just a bodily threat that the characters can’t see.
+The False Hydra hides from the players’ memories and perception of
+reality itself.</p>
+<h2 id="why-use-horror">Why Use Horror?</h2>
+<p>Fear is one of those primal emotions in humans - the other being
+laughter. Both a panicked cry and a sudden laugh are involuntary
+physical reactions to a stimulus. When role-playing, we're embodying a
+character to feel their triumphs and pains, but fear and laughter are
+the most potent.</p>
+<p>Well-used horror ramps up stakes, slowly winding up the tension
+before allowing for some kind of catharsis at the end. That catharsis
+could be classic horror - total failure and death at worst, just barely
+surviving at best. For an average D&amp;D game, catharsis probably
+should include an adventurous heroic battle that ends in victory, but
+that's just personal taste. Regardless, horror elements make that epic
+catharsis feel more epic.</p>
+<p><a
+href="https://www.reddit.com/r/DnDBehindTheScreen/comments/j63r3v/thrills_chills_adding_horror_to_your_game/">Source</a></p>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.40 - Gambits</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<h1 id="gambits">Gambits</h1>
+<h2 id="tactical-gambits">Tactical Gambits</h2>
+<p>The tactical gambit rules presented here are opt-in mechanical layer
+on top of normal 5e combat rules that allow players and foes to attempt
+heroic manoeuvres typically depicted in fiction.</p>
+<p>The design prerogative of these options is to not change the balance
+of the game; and they are not meant to replace or invalidate any core
+rules like fighting styles, feats, existing combat actions, or classes
+like the battle master and their manoeuvres.</p>
+<p>Semantically a gambit is <em>when someone sacrifices a resource or an
+opportunity in order to achieve a potential upper hand in a
+conflict</em>. The gambits presented here allow a player to trade
+advantage or to take disadvantage on their attack roll for potential
+tactical benefits. This means that gambit benefits are curbed by the
+choice of taking a gamble. Thus both a player that actively embraces
+gambits, and a player that prefers to play it safe will be roughly equal
+in combat.</p>
+<h3 id="using-tactical-gambits">Using Tactical Gambits</h3>
+<p>Once per turn, when you do not already have disadvantage on an
+attack, you can choose to perform a gambit while performing an attack by
+taking disadvantage to the attack. If you had advantage on the attack
+the gambit counters your advantage and you roll normally.</p>
+<p>On a successful hit, in addition to the normal damage of your attack
+you can apply the benefits of the gambit you chose.</p>
+<p>Additionally, as an optional rule, you may trade extra damage dice on
+a successful critical hit to use a gambit, however you must decide to do
+so before you roll any damage dice.</p>
+<h2 id="aimed-shot">Aimed shot</h2>
+<p><em>Range attacks only.</em> You take the time to aim extra carefully
+before shooting. You can ignore up to three-quarters cover on the
+attack. However because of your focus you cannot take attacks of
+opportunity until the start of your next turn.</p>
+<h2 id="arm-injury">Arm Injury</h2>
+<p>On a successful hit you slightly injure the target's arm, or an
+equivalent appendage. The target has disadvantage on the next weapon
+attack roll it makes before the end of its next turn.</p>
+<h2 id="bash-shield">Bash Shield</h2>
+<p>On a successful hit you push aside the target's shield. The target
+cannot benefit from the protection of their shield until the start of
+its next turn.</p>
+<h2 id="careful-attack">Careful Attack</h2>
+<p><em>Melee attacks only.</em> You attack very carefully. The next
+attack against you has disadvantage until the start of your next
+turn.</p>
+<h2 id="dig-the-wound">Dig the wound</h2>
+<p>If the target is already missing any of its hit points before your
+attack, you can aim for a weak point in it's defences, roll a d4 and add
+it to the damage.</p>
+<h2 id="disorient">Disorient</h2>
+<p>On a successful hit you disorient the target, and it moves 5 feet in
+a random direction if it can move and its speed is at least 5 feet. Roll
+a d4 for the direction: 1, north; 2, south; 3, east; or 4, west. This
+movement doesn't provoke opportunity attacks, and if the direction
+rolled is blocked, the target doesn't move.</p>
+<h2 id="distract">Distract</h2>
+<p>The next attack roll against the target by an attacker other than you
+has advantage if the attack is made before the start of the target's
+next turn.</p>
+<h2 id="flat-of-the-blade">Flat of the Blade</h2>
+<p><em>Melee attacks only.</em> You adjust your combat style to change
+the damage type of your weapon. You can choose to change the damage of
+your attack to bludgeoning, piercing or slashing.</p>
+<h2 id="hamstring">Hamstring</h2>
+<p>On a successful hit the target begins limping. It must spend an
+additional foot for every foot it moves until the end of its next
+turn.</p>
+<h2 id="head-hit-or-gut-punch">Head hit, or Gut punch</h2>
+<p>On a successful hit the target can't take reactions until the start
+of its next turn.</p>
+<h2 id="reckless-lunge">Reckless Lunge</h2>
+<p><em>Melee attacks only</em> You increase the reach of your attack by
+5 feet before the attack.</p>
+<h2 id="mock-or-trick">Mock, or Trick</h2>
+<p><em>Requires Charisma 13 or higher.</em> On a successful hit the
+target has disadvantage on the next attack roll it makes against you, as
+well as any Wisdom checks it performs before the end of its next
+turn.</p>
+<h2 id="pin-down">Pin Down</h2>
+<p>After a successful hit against the target you can use a bonus action
+to pin the target to the ground, a wall, or another large object. A
+pinned creature is considered grappled by the object it is pinned to
+until it uses an action, or bonus action to free it's self, or the end
+of its next turn when it automatically breaks free.</p>
+<h2 id="pot-shots">Pot shots</h2>
+<p><em>Range attacks only.</em> You aim carelessly for easy shots on
+nearby targets. After your attack you can use your bonus action to
+perform a second attack on a separate target, this second attack also
+suffers disadvantage. Both attacks must be performed on targets within
+10-feet of you.</p>
+<h2 id="push">Push</h2>
+<p><em>Melee attacks only.</em> On a successful hit you can push a
+target, that is of your size or smaller, 5-feet back while pursuing the
+target 5-feet. This movement doesn't provoke opportunity attacks, and if
+the direction is blocked, you and the target don't move.</p>
+<h2 id="pull-or-lure">Pull, or Lure</h2>
+<p><em>Melee attacks only.</em> On a successful hit you can move 5-feet
+away from the target and pull the same target, if it is of your size or
+smaller, 5-feet towards you. This movement doesn't provoke opportunity
+attacks, and if the direction is blocked, you and the target don't
+move.</p>
+<h2 id="ricochet">Ricochet</h2>
+<p><em>Range attacks only.</em> You aim for a ricochet hit in an attempt
+to catch the target off guard. When performing a ricochet, you need line
+of sight to a surface or object that has line of sight to the target.
+When you perform a ricochet attack you ignore half cover and any shield
+bonus to AC the target might have.</p>
+<h2 id="tricky-pass">Tricky Pass</h2>
+<p><em>Melee attacks only.</em> When performing an attack of opportunity
+against a moving target you can perform a pass. On a successful hit you
+force the target to spend it's movement to move 5-feet in any direction
+of your choice. This forced movement doesn't provoke opportunity
+attacks.</p>
+<h2 id="unbalance">Unbalance</h2>
+<p>After a successful hit against the target loses their balance. The
+target has disadvantage on checks, and saves to avoid being moved or
+forced prone until the start of it's next turn.</p>
+<p><a
+href="https://www.reddit.com/r/DnDBehindTheScreen/comments/aqr7k1/gambits_a_simple_system_to_spice_up_combat/">Source</a></p>
+</body>
+</html>

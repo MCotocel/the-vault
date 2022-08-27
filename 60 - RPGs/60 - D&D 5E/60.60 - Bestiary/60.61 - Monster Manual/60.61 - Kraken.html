@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.61 - Kraken</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<hr />
+<blockquote>
+<h2 id="kraken">Kraken</h2>
+<p><em>Gargantuan monstrosity (titan), chaotic evil</em> <strong><em> -
+<strong>Armor Class</strong> 18 (natural armor) - <strong>Hit
+Points</strong> 472 (27d20 + 189) - <strong>Speed</strong> 20 ft., swim
+60 ft. </em></strong> |STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:| |30 (+10)|11 (+0)|25 (+7)|22
+(+6)|18 (+4)|20 (+5)| <strong><em> - <strong>Saving Throws</strong> Str
++17, Dex +7, Con +14, Int +13, Wis +11 - <strong>Damage
+Immunities</strong> lightning; bludgeoning, piercing, and slashing from
+nonmagical attacks - <strong>Condition Immunities</strong> frightened,
+paralyzed - <strong>Senses</strong> truesight 120 ft., passive
+Perception 14 - <strong>Languages</strong> Abyssal, Celestial, Infernal,
+Primordial, telepathy 120 ft. but can't speak -
+<strong>Challenge</strong> 23 (50,000 XP) - <strong>Proficiency
+Bonus</strong> +7 </em></strong> <strong><em>Amphibious.</em></strong>
+The kraken can breathe air and water.</p>
+<p><strong><em>Freedom of Movement.</em></strong> The kraken ignores
+difficult terrain, and magical effects can't reduce its speed or cause
+it to be restrained. It can spend 5 feet of movement to escape from
+nonmagical restraints or being grappled.</p>
+<p><strong><em>Siege Monster.</em></strong> The kraken deals double
+damage to objects and structures.</p>
+<h3 id="actions">Actions</h3>
+<p><strong><em>Multiattack.</em></strong> The kraken makes three
+tentacle attacks, each of which it can replace with one use of
+Fling.</p>
+<p><strong><em>Bite.</em></strong> <em>Melee Weapon Attack:</em> +17 to
+hit, reach 5 ft., one target. <em>Hit:</em> 23 (3d8 + 10) piercing
+damage. If the target is a Large or smaller creature grappled by the
+kraken, that creature is swallowed, and the grapple ends. While
+swallowed, the creature is blinded and restrained, it has total cover
+against attacks and other effects outside the kraken, and it takes 42
+(12d6) acid damage at the start of each of the kraken's turns. If the
+kraken takes 50 damage or more on a single turn from a creature inside
+it, the kraken must succeed on a DC 25 Constitution saving throw at the
+end of that turn or regurgitate all swallowed creatures, which fall
+prone in a space within 10 feet of the kraken. If the kraken dies, a
+swallowed creature is no longer restrained by it and can escape from the
+corpse using 15 feet of movement, exiting prone.</p>
+<p><strong><em>Tentacle.</em></strong> <em>Melee Weapon Attack:</em> +17
+to hit, reach 30 ft., one target. <em>Hit:</em> 20 (3d6 + 10)
+bludgeoning damage, and the target is grappled (escape DC 18). Until
+this grapple ends, the target is restrained. The kraken has ten
+tentacles, each of which can grapple one target.</p>
+<p><strong><em>Fling.</em></strong> One Large or smaller object held or
+creature grappled by the kraken is thrown up to 60 feet in a random
+direction and knocked prone. If a thrown target strikes a solid surface,
+the target takes 3 (1d6) bludgeoning damage for every 10 feet it was
+thrown. If the target is thrown at another creature, that creature must
+succeed on a DC 18 Dexterity saving throw or take the same damage and be
+knocked prone.</p>
+<p><strong><em>Lightning Storm.</em></strong> The kraken magically
+creates three bolts of lightning, each of which can strike a target the
+kraken can see within 120 feet of it. A target must make a DC 23
+Dexterity saving throw, taking 22 (4d10) lightning damage on a failed
+save, or half as much damage on a successful one.</p>
+<h3 id="legendary-actions">Legendary Actions</h3>
+<p>The kraken can take 3 legendary actions, choosing from the options
+below. Only one legendary action can be used at a time and only at the
+end of another creature's turn. The kraken regains spent legendary
+actions at the start of its turn.</p>
+<ul>
+<li><strong>Tentacle Attack or Fling.</strong> The kraken makes one
+tentacle attack or uses its Fling.</li>
+<li><strong>Lightning Storm (Costs 2 Actions).</strong> The kraken uses
+Lightning Storm.</li>
+<li><strong>Ink Cloud (Costs 3 Actions).</strong> While underwater, the
+kraken expels an ink cloud in a 60-foot radius. The cloud spreads around
+corners, and that area is heavily obscured to creatures other than the
+kraken. Each creature other than the kraken that ends its turn there
+must succeed on a DC 23 Constitution saving throw, taking 16 (3d10)
+poison damage on a failed save, or half as much damage on a successful
+one. A strong current disperses the cloud, which otherwise disappears at
+the end of the kraken's next turn.</li>
+</ul>
+</blockquote>
+<h2 id="kraken-1">Kraken</h2>
+<p>Beneath the waves, the kraken sleeps for untold ages, awaiting some
+fell sign or calling. Land-born mortals who sail the open sea forget the
+reasons their ancestors dreaded the ocean, even as the races of the deep
+ignore strange gaps in their histories when their civilizations nearly
+vanished after the appearance of the tentacled horror.</p>
+<p><strong><em>Leviathans of Legend.</em></strong> At the beginning of
+time, krakens served as fierce warriors of the gods. When the gods' wars
+ended, the krakens shrugged free of their servitude, never again to be
+bound by other beings. Whole nations quake in fear when the kraken
+emerges from its dark demesne, and even in the middle of the deepest
+oceans, storms rise or abate according to its will. The kraken is a
+primeval force that obliterates the greatest achievements of
+civilization as if they were castles in the sand. Its devastating
+attacks can destroy ocean trade and halt communication between coastal
+cities.</p>
+<p>An ominous darkness presages a kraken's attack, and a cloud of inky
+poison colors the water around it. Galleons and warships vanish when its
+tentacles uncoil from the deep, the kraken breaking their masts like
+kindling before drawing down ships and crew. Not even landlocked surface
+dwellers are safe from a kraken's wrath. Krakens can breathe air as
+easily as water, and some crawl up rivers to nest in freshwater lakes,
+destroying cities and towns along the way. Adventurers tell of these
+monsters lairing in the ruins of lakeside citadels, their tentacles
+twined around leaning towers of disintegrating stone.</p>
+<p><strong><em>Mortal Foes.</em></strong> Some krakens are virtual gods,
+with cults and minions spread across sea and land. Others are allied
+with Olhydra, the evil Princess of Elemental Water, and use her cultists
+to enforce their will on land and sea. A kraken pleased with its
+worshipers can becalm rough seas and bring a bounteous harvest of fish
+to the faithful. However, the devious mind of a kraken is ancient beyond
+reckoning, and is ultimately bent to the ruination of all things.</p>
+<p><strong><em>A Kraken's Lair.</em></strong> A kraken lives in dark
+depths, usually a sunken rift or a cavern filled with detritus,
+treasure, and wrecked ships.</p>
+<h4 id="lair-actions">Lair Actions</h4>
+<p>On initiative count 20 (losing initiative ties), the kraken takes a
+lair action to cause one of the following magical effects:</p>
+<ul>
+<li>A strong current moves through the kraken's lair. Each creature
+within 60 feet of the kraken must succeed on a DC 23 Strength saving
+throw or be pushed up to 60 feet away from the kraken. On a success, the
+creature is pushed 10 feet away from the kraken.</li>
+<li>Creatures in the water within 60 feet of the kraken have
+vulnerability to lightning damage until initiative count 20 on the next
+round.</li>
+<li>The water in the kraken's lair becomes electrically charged. All
+creatures within 120 feet of the kraken must succeed on a DC 23
+Constitution saving throw, taking 10 (3d6) lightning damage on a failed
+save, or half as much damage on a successful one.</li>
+</ul>
+<h4 id="regional-effects">Regional Effects</h4>
+<p>The region containing a kraken's lair is warped by the creature's
+blasphemous presence, creating the following magical effects:</p>
+<ul>
+<li>The kraken can alter the weather at will in a 6-mile radius centered
+on its lair. The effect is identical to the <em>control weather</em>
+spell.</li>
+<li>Water elementals coalesce within 6 miles of the lair. These
+elementals can't leave the water and have Intelligence and Charisma
+scores of 1 (-5).</li>
+<li>Aquatic creatures within 6 miles of the lair that have an
+Intelligence score of 2 or lower are charmed by the kraken and
+aggressive toward intruders in the area.</li>
+</ul>
+<p>When the kraken dies, all of these regional effects fade
+immediately.</p>
+</body>
+</html>

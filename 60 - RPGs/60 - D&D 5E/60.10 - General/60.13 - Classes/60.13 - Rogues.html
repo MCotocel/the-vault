@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.13 - Rogues</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<h1 id="rogues">Rogues</h1>
+<p>Signalling for her companions to wait, a halfling creeps forward
+through the dungeon hall. She presses an ear to the door, then pulls out
+a set of tools and picks the lock in the blink of an eye. Then she
+disappears into the shadows as her fighter friend moves forward to kick
+the door open.</p>
+<p>A human lurks in the shadows of an alley while his accomplice
+prepares for her part in the ambush. When their target - a notorious
+slaver - passes the alleyway, the accomplice cries out, the slaver comes
+to investigate, and the assassin’s blade cuts his throat before he can
+make a sound.</p>
+<p>Suppressing a giggle, a gnome waggles her fingers and magically lifts
+the key ring from the guard’s belt. In a moment, the keys are in her
+hand, the cell door is open, and she and her companions are free to make
+their escape.</p>
+<p>Rogues rely on skill, stealth, and their foes’ vulnerabilities to get
+the upper hand in any situation. They have a knack for finding the
+solution to just about any problem, demonstrating a resourcefulness and
+versatility that is the cornerstone of any successful adventuring
+party.</p>
+<h2 id="skill-and-precision">Skill and Precision</h2>
+<p>Rogues devote as much effort to mastering the use of a variety of
+skills as they do to perfecting their combat abilities, giving them a
+broad expertise that few other characters can match. Many rogues focus
+on stealth and deception, while others refine the skills that help them
+in a dungeon environment, such as climbing, finding and disarming traps,
+and opening locks.</p>
+<p>When it comes to combat, rogues prioritise cunning over brute
+strength. A rogue would rather make one precise strike, placing it
+exactly where the attack will hurt the target most, than wear an
+opponent down with a barrage of attacks. Rogues have an almost
+supernatural knack for avoiding danger, and a few learn magical tricks
+to supplement their other abilities.</p>
+<h2 id="a-shady-living">A Shady Living</h2>
+<p>Every town and city has its share of rogues. Most of them live up to
+the worst stereotypes of the class, making a living as burglars,
+assassins, cutpurses, and con artists. Often, these scoundrels are
+organised into thieves’ guilds or crime families. Plenty of rogues
+operate independently, but even they sometimes recruit apprentices to
+help them in their scams and heists. A few rogues make an honest living
+as locksmiths, investigators, or exterminators, which can be a dangerous
+job in a world where dire rats - and wererats - haunt the sewers.</p>
+<p>As adventurers, rogues fall on both sides of the law. Some are
+hardened criminals who decide to seek their fortune in treasure hoards,
+while others take up a life of adventure to escape from the law. Some
+have learned and perfected their skills with the explicit purpose of
+infiltrating ancient ruins and hidden crypts in search of treasure.</p>
+<h2 id="creating-a-rogue">Creating a Rogue</h2>
+<p>As you create your rogue character, consider the character’s
+relationship to the law. Do you have a criminal past—or present? Are you
+on the run from the law or from an angry thieves’ guild master? Or did
+you leave your guild in search of bigger risks and bigger rewards? Is it
+greed that drives you in your adventures, or some other desire or
+ideal?</p>
+<p>What was the trigger that led you away from your previous life? Did a
+great con or heist gone terribly wrong cause you to reevaluate your
+career? Maybe you were lucky and a successful robbery gave you the coin
+you needed to escape the squalor of your life. Did wanderlust finally
+call you away from your home? Perhaps you suddenly found yourself cut
+off from your family or your mentor, and you had to find a new means of
+support. Or maybe you made a new friend - another member of your
+adventuring party - who showed you new possibilities for earning a
+living and employing your particular talents.</p>
+<h3 id="quick-build">Quick Build</h3>
+<p>You can make a rogue quickly by following these suggestions. First,
+Dexterity should be your highest ability score. Make Intelligence your
+next-highest if you want to excel at Investigation or plan to take up
+the Arcane Trickster archetype. Choose Charisma instead if you plan to
+emphasise deception and social interaction. Second, choose the charlatan
+background.</p>
+<table>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 23%" />
+<col style="width: 16%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Level</th>
+<th>Proficiency Bonus</th>
+<th>Sneak Attack</th>
+<th>Features</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>+2</td>
+<td>1d6</td>
+<td>Expertise, sneak attack, thieves' cant</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>+2</td>
+<td>1d6</td>
+<td>Cunning action</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>+2</td>
+<td>2d6</td>
+<td>Roguish archetype</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>+2</td>
+<td>2d6</td>
+<td>Ability score improvement</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>+3</td>
+<td>3d6</td>
+<td>Uncanny dodge</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>+3</td>
+<td>3d6</td>
+<td>Expertise</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>+3</td>
+<td>4d6</td>
+<td>Evasion</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>+3</td>
+<td>4d6</td>
+<td>Ability score improvement</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>+4</td>
+<td>5d6</td>
+<td>Roguish archetype feature</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>+4</td>
+<td>5d6</td>
+<td>Ability score improvement</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>+4</td>
+<td>6d6</td>
+<td>Reliable talent</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>+4</td>
+<td>6d6</td>
+<td>Ability score improvement</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>+5</td>
+<td>7d6</td>
+<td>Roguish archetype feature</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>+5</td>
+<td>7d6</td>
+<td>Blindsense</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>+5</td>
+<td>8d6</td>
+<td>Slippery mind</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>+5</td>
+<td>8d6</td>
+<td>Ability score improvement</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>+6</td>
+<td>9d6</td>
+<td>Roguish archetype feature</td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>+6</td>
+<td>9d6</td>
+<td>Elusive</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>+6</td>
+<td>10d6</td>
+<td>Ability score improvement</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>+6</td>
+<td>10d6</td>
+<td>Stroke of luck</td>
+</tr>
+</tbody>
+</table>
+<h2 id="class-features">Class Features</h2>
+<p>As a rogue, you have the following class features.</p>
+<h3 id="hit-points">Hit Points</h3>
+<h4 id="hit-dice">Hit Dice</h4>
+<ul>
+<li>1d8 per rogue level</li>
+</ul>
+<h4 id="hit-points-at-1st-level">Hit Points at 1st Level</h4>
+<ul>
+<li>8 + your Constitution modifier</li>
+</ul>
+<h4 id="hit-points-at-higher-levels">Hit Points at Higher Levels</h4>
+<ul>
+<li>1d8 (or 5) + your Constitution modifier per rogue level after
+1st</li>
+</ul>
+<h3 id="proficiencies">Proficiencies</h3>
+<h4 id="armour">Armour</h4>
+<ul>
+<li>Light armour</li>
+</ul>
+<h4 id="weapons">Weapons</h4>
+<ul>
+<li>Simple weapons</li>
+<li>Hand crossbows</li>
+<li>Longswords</li>
+<li>Rapiers</li>
+<li>Shortswords</li>
+</ul>
+<h4 id="tools">Tools</h4>
+<ul>
+<li>Thieves’ tools</li>
+</ul>
+<h4 id="saving-throws">Saving Throws</h4>
+<ul>
+<li>Dexterity</li>
+<li>Intelligence</li>
+</ul>
+<h4 id="skills">Skills</h4>
+<p>Choose four from</p>
+<ul>
+<li>Acrobatics</li>
+<li>Athletics</li>
+<li>Deception</li>
+<li>Insight</li>
+<li>Intimidation</li>
+<li>Investigation</li>
+<li>Perception</li>
+<li>Performance</li>
+<li>Persuasion</li>
+<li>Sleight of Hand</li>
+<li>Stealth</li>
+</ul>
+<h4 id="equipment">Equipment</h4>
+<p>You start with the following equipment, in addition to the equipment
+granted by your background:</p>
+<ul>
+<li>(a) A rapier or (b) a shortsword</li>
+<li>(a) A shortbow and quiver of 20 arrows or (b) a shortsword</li>
+<li>(a) A burglar’s pack, (b) a dungeoneer’s pack, or (c) an explorer’s
+pack</li>
+<li>Leather armour, two daggers, and thieves’ tools</li>
+</ul>
+<h3 id="expertise">Expertise</h3>
+<p>At 1st level, choose two of your skill proficiencies, or one of your
+skill proficiencies and your proficiency with thieves’ tools. Your
+proficiency bonus is doubled for any ability check you make that uses
+either of the chosen proficiencies.</p>
+<p>At 6th level, you can choose two more of your proficiencies (in
+skills or with thieves’ tools) to gain this benefit.</p>
+<h3 id="sneak-attack">Sneak Attack</h3>
+<p>Beginning at 1st level, you know how to strike subtly and exploit a
+foe’s distraction. Once per turn, you can deal an extra 1d6 damage to
+one creature you hit with an attack if you have advantage on the attack
+roll. The attack must use a finesse or a ranged weapon.</p>
+<p>You don’t need advantage on the attack roll if another enemy of the
+target is within 5 feet of it, that enemy isn’t incapacitated, and you
+don’t have disadvantage on the attack roll.</p>
+<p>The amount of the extra damage increases as you gain levels in this
+class, as shown in the Sneak Attack column of the Rogue table.</p>
+<h3 id="thieves-cant">Thieves’ Cant</h3>
+<p>During your rogue training you learned thieves’ cant, a secret mix of
+dialect, jargon, and code that allows you to hide messages in seemingly
+normal conversation. Only another creature that knows thieves’ cant
+understands such messages. It takes four times longer to convey such a
+message than it does to speak the same idea plainly.</p>
+<p>In addition, you understand a set of secret signs and symbols used to
+convey short, simple messages, such as whether an area is dangerous or
+the territory of a thieves’ guild, whether loot is nearby, or whether
+the people in an area are easy marks or will provide a safe house for
+thieves on the run.</p>
+<h3 id="cunning-action">Cunning Action</h3>
+<p>Starting at 2nd level, your quick thinking and agility allow you to
+move and act quickly. You can take a bonus action on each of your turns
+in combat. This action can be used only to take the Dash, Disengage, or
+Hide action.</p>
+<h3 id="roguish-archetype">Roguish Archetype</h3>
+<p>At 3rd level, you choose an archetype that you emulate in the
+exercise of your rogue abilities: Thief, Assassin, or Arcane Trickster,
+all detailed at the end of the class description. Your archetype choice
+grants you features at 3rd level and then again at 9th, 13th, and 17th
+level.</p>
+<h3 id="ability-score-improvement">Ability Score Improvement</h3>
+<p>When you reach 4th level, and again at 8th, 10th, 12th, 16th, and
+19th level, you can increase one ability score of your choice by 2, or
+you can increase two ability scores of your choice by 1. As normal, you
+can’t increase an ability score above 20 using this feature.</p>
+<p>Using the optional feats rule, you can forgo taking this feature to
+take a feat of your choice instead.</p>
+<h3 id="uncanny-dodge">Uncanny Dodge</h3>
+<p>Starting at 5th level, when an attacker that you can see hits you
+with an attack, you can use your reaction to halve the attack’s damage
+against you.</p>
+<h3 id="expertise-1">Expertise</h3>
+<p>At 6th level, choose two more of your skill proficiencies, or one
+more of your skill proficiencies and your proficiency with thieves’
+tools. Your proficiency bonus is doubled for any ability check you make
+that uses either of the chosen proficiencies.</p>
+<h3 id="evasion">Evasion</h3>
+<p>Beginning at 7th level, you can nimbly dodge out of the way of
+certain area effects, such as an ancient red dragon’s fiery breath or an
+ice storm spell. When you are subjected to an effect that allows you to
+make a Dexterity saving throw to take only half damage, you instead take
+no damage if you succeed on the saving throw, and only half damage if
+you fail.</p>
+<h3 id="reliable-talent">Reliable Talent</h3>
+<p>By 11th level, you have refined your chosen skills until they
+approach perfection. Whenever you make an ability check that lets you
+add your proficiency bonus, you can treat a d20 roll of 9 or lower as a
+10.</p>
+<h3 id="blindsense">Blindsense</h3>
+<p>Starting at 14th level, if you are able to hear, you are aware of the
+location of any hidden or invisible creature within 10 feet of you.</p>
+<h3 id="slippery-mind">Slippery Mind</h3>
+<p>By 15th level, you have acquired greater mental strength. You gain
+proficiency in Wisdom saving throws.</p>
+<h3 id="elusive">Elusive</h3>
+<p>Beginning at 18th level, you are so evasive that attackers rarely
+gain the upper hand against you. No attack roll has advantage against
+you while you aren’t incapacitated.</p>
+<h3 id="stroke-of-luck">Stroke of Luck</h3>
+<p>At 20th level, you have an uncanny knack for succeeding when you need
+to. If your attack misses a target within range, you can turn the miss
+into a hit. Alternatively, if you fail an ability check, you can treat
+the d20 roll as a 20.</p>
+<p>Once you use this feature, you can’t use it again until you finish a
+short or long rest.</p>
+<h3 id="roguish-archetypes">Roguish Archetypes</h3>
+<p>Rogues have many features in common, including their emphasis on
+perfecting their skills, their precise and deadly approach to combat,
+and their increasingly quick reflexes. But different rogues steer those
+talents in varying directions, embodied by the rogue archetypes. Your
+choice of archetype is a reflection of your focus - not necessarily an
+indication of your chosen profession, but a description of your
+preferred techniques.</p>
+<h4 id="thief">Thief</h4>
+<p>You hone your skills in the larcenous arts. Burglars, bandits,
+cutpurses, and other criminals typically follow this archetype, but so
+do rogues who prefer to think of themselves as professional treasure
+seekers, explorers, delvers, and investigators. In addition to improving
+your agility and stealth, you learn skills useful for delving into
+ancient ruins, reading unfamiliar languages, and using magic items you
+normally couldn’t employ.</p>
+<h5 id="fast-hands">Fast Hands</h5>
+<p>Starting at 3rd level, you can use the bonus action granted by your
+Cunning Action to make a Dexterity (Sleight of Hand) check, use your
+thieves’ tools to disarm a trap or open a lock, or take the Use an
+Object action.</p>
+<h5 id="second-story-work">Second-Story Work</h5>
+<p>When you choose this archetype at 3rd level, you gain the ability to
+climb faster than normal; climbing no longer costs you extra
+movement.</p>
+<p>In addition, when you make a running jump, the distance you cover
+increases by a number of feet equal to your Dexterity modifier.</p>
+<h5 id="supreme-sneak">Supreme Sneak</h5>
+<p>Starting at 9th level, you have advantage on a Dexterity (Stealth)
+check if you move no more than half your speed on the same turn.</p>
+<h5 id="use-magic-device">Use Magic Device</h5>
+<p>By 13th level, you have learned enough about the workings of magic
+that you can improvise the use of items even when they are not intended
+for you. You ignore all class, race, and level requirements on the use
+of magic items.</p>
+<h5 id="thiefs-reflexes">Thief’s Reflexes</h5>
+<p>When you reach 17th level, you have become adept at laying ambushes
+and quickly escaping danger. You can take two turns during the first
+round of any combat. You take your first turn at your normal initiative
+and your second turn at your initiative minus 10. You can’t use this
+feature when you are surprised.</p>
+<h4 id="assassin">Assassin</h4>
+<p>You focus your training on the grim art of death. Those who adhere to
+this archetype are diverse: hired killers, spies, bounty hunters, and
+even specially anointed priests trained to exterminate the enemies of
+their deity. Stealth, poison, and disguise help you eliminate your foes
+with deadly efﬁciency.</p>
+<h5 id="bonus-proficiencies">Bonus Proficiencies</h5>
+<p>When you choose this archetype at 3rd level, you gain proﬁciency with
+the disguise kit and the poisoner's kit.</p>
+<h5 id="assassinate">Assassinate</h5>
+<p>Starting at 3rd level, you are at your deadliest when you get the
+drop on your enemies. You have advantage on attack rolls against any
+creature that hasn't taken a turn in the combat yet. In addition, any
+hit you score against a creature that is surprised is a critical
+hit.</p>
+<h5 id="infiltration-expertise">Infiltration Expertise</h5>
+<p>Starting at 9th level, you can unfailingly create false identities
+for yourself. You must spend seven days and 25 GP to establish the
+history, profession, and affiliations for an identity. You can't
+establish an identity that belongs to someone else. For example, you
+might acquire appropriate clothing, letters of introduction, and
+ofﬁcial-looking certiﬁcation to establish yourself as a member of a
+trading house from a remote city so you can insinuate yourself into the
+company of other wealthy merchants. Thereafter, if you adopt the new
+identity as a disguise, other creatures believe you to be that person
+until given an obvious reason not to.</p>
+<h5 id="impostor">Impostor</h5>
+<p>At 13th level, you gain the ability to unerringly mimic another
+person’s speech, writing, and behaviour.</p>
+<p>You must spend at least three hours studying these three components
+of the person's behaviour, listening to speech, examining handwriting,
+and observing mannerisms.</p>
+<p>Your ruse is indiscernible to the casual observer. If a wary creature
+suspects something is amiss, you have advantage on any Charisma
+(Deception) check you make to avoid detection.</p>
+<h5 id="death-strike">Death Strike</h5>
+<p>Starting at 17th level, you become a master of instant death. When
+you attack and hit a creature that is surprised, it must make a
+Constitution saving throw (DC 8 + your Dexterity modiﬁer + your
+proﬁciency bonus). On a failed save, double the damage of your attack
+against the creature.</p>
+<h4 id="arcane-trickster">Arcane Trickster</h4>
+<p>Some rogues enhance their fine-honed skills of stealth and agility
+with magic, learning tricks of enchantment and illusion. These rogues
+include pickpockets and burglars, but also pranksters, mischief-makers,
+and a significant number of adventurers.</p>
+<h5 id="spellcasting">Spellcasting</h5>
+<p>When you reach 3rd level, you gain the ability to cast spells. See
+chapter 10 for the general rules of spellcasting and chapter 11 for the
+wizard spell list.</p>
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 27%" />
+<col style="width: 23%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Level</th>
+<th>Cantrips known</th>
+<th>Spells known</th>
+<th>lvl 1</th>
+<th>lvl 2</th>
+<th>lvl 3</th>
+<th>lvl 4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>3</td>
+<td>5</td>
+<td>4</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>3</td>
+<td>6</td>
+<td>4</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>3</td>
+<td>6</td>
+<td>4</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>4</td>
+<td>7</td>
+<td>4</td>
+<td>3</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>4</td>
+<td>8</td>
+<td>4</td>
+<td>3</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>4</td>
+<td>8</td>
+<td>4</td>
+<td>3</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>4</td>
+<td>9</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>4</td>
+<td>10</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>4</td>
+<td>11</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>4</td>
+<td>11</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>4</td>
+<td>11</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>4</td>
+<td>11</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>4</td>
+<td>12</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>4</td>
+<td>13</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h6 id="cantrips">Cantrips</h6>
+<p>You learn three cantrips: mage hand and two other cantrips of your
+choice from the wizard spell list. You learn another wizard cantrip of
+your choice at 10th level.</p>
+<h6 id="spell-slots">Spell Slots</h6>
+<p>The Arcane Trickster Spellcasting table shows how many spell slots
+you have to cast your wizard spells of 1st level and higher. To cast one
+of these spells, you must expend a slot of the spell's level or higher.
+You regain all expended spell slots when you finish a long rest.</p>
+<p>For example, if you know the 1st-level spell charm person and have a
+1st-level and a 2nd-level spell slot available, you can cast charm
+person using either slot.</p>
+<h6 id="spells-known-of-1st-level-and-higher">Spells Known of 1st-Level
+and Higher</h6>
+<p>You know three 1st-level wizard spells of your choice, two of which
+you must choose from the enchantment and illusion spells on the wizard
+spell list.</p>
+<p>The Spells Known column of the Arcane Trickster Spellcasting table
+shows when you learn more wizard spells of 1st level or higher. Each of
+these spells must be an enchantment or illusion spell of your choice,
+and must be of a level for which you have spell slots. For instance,
+when you reach 7th level in this class, you can learn one new spell of
+1st or 2nd level.</p>
+<p>The spells you learn at 8th, 14th, and 20th level can come from any
+school of magic.</p>
+<p>Whenever you gain a level in this class, you can replace one of the
+wizard spells you know with another spell of your choice from the wizard
+spell list. The new spell must be of a level for which you have spell
+slots, and it must be an enchantment or illusion spell, unless you're
+replacing the spell you gained at 3rd, 8th, 14th, or 20th level from any
+school of magic.</p>
+<h6 id="spellcasting-ability">Spellcasting Ability</h6>
+<p>Intelligence is your spellcasting ability for your wizard spells,
+since you learn your spells through dedicated study and memorisation.
+You use your Intelligence whenever a spell refers to your spellcasting
+ability. In addition, you use your Intelligence modifier when setting
+the saving throw DC for a wizard spell you cast and when making an
+attack roll with one.</p>
+<ul>
+<li>Spell save DC = 8 + your proficiency bonus + your Intelligence
+modifier</li>
+<li>Spell attack modifier = your proficiency bonus + your Intelligence
+modifier</li>
+</ul>
+<h5 id="mage-hand-legerdemain">Mage Hand Legerdemain</h5>
+<p>Starting at 3rd level, when you cast mage hand, you can make the
+spectral hand invisible, and you can perform the following additional
+tasks with it:</p>
+<ul>
+<li>You can stow one object the hand is holding in a container worn or
+carried by another creature.</li>
+<li>You can retrieve an object in a container worn or carried by another
+creature.</li>
+<li>You can use thieves' tools to pick locks and disarm traps at
+range.</li>
+</ul>
+<p>You can perform one of these tasks without being noticed by a
+creature if you succeed on a Dexterity (Sleight of Hand) check contested
+by the creature's Wisdom (Perception) check.</p>
+<p>In addition, you can use the bonus action granted by your Cunning
+Action to control the hand.</p>
+<h5 id="magical-ambush">Magical Ambush</h5>
+<p>Starting at 9th level, if you are hidden from a creature when you
+cast a spell on it, the creature has disadvantage on any saving throw it
+makes against the spell this turn.</p>
+<h5 id="versatile-trickster">Versatile Trickster</h5>
+<p>At 13th level, you gain the ability to distract targets with your
+mage hand. As a bonus action on your turn, you can designate a creature
+within 5 feet of the spectral hand created by the spell. Doing so gives
+you advantage on attack rolls against that creature until the end of the
+turn.</p>
+<h5 id="spell-thief">Spell Thief</h5>
+<p>At 17th level, you gain the ability to magically steal the knowledge
+of how to cast a spell from another spellcaster.</p>
+<p>Immediately after a creature casts a spell that targets you or
+includes you in its area of effect, you can use your reaction to force
+the creature to make a saving throw with its spellcasting ability
+modifier. The DC equals your spell save DC. On a failed save, you negate
+the spell's effect against you, and you steal the knowledge of the spell
+if it is at least 1st level and of a level you can cast (it doesn't need
+to be a wizard spell). For the next 8 hours, you know the spell and can
+cast it using your spell slots. The creature can't cast that spell until
+the 8 hours have passed.</p>
+<p>Once you use this feature, you can't use it again until you finish a
+long rest.</p>
+</body>
+</html>

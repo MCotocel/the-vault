@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.50 - 100 plot hooks for your stronghold adventures</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<h1 id="plot-hooks-for-your-stronghold-adventures">100 plot hooks for
+your stronghold adventures</h1>
+<h2 id="outside-forces">Outside forces</h2>
+<p>Straight-forward events where something threatens your
+stronghold.</p>
+<table>
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 98%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01</td>
+<td>A room in the lower floor collapses, revealing a small crypt. There
+are no records of it being built, and it looks extremely ancient. Just a
+day after, everybody in the stronghold starts getting sick, their skin
+turns grey and blood drips from their nose and mouth.</td>
+</tr>
+<tr class="even">
+<td>02</td>
+<td>A room in the lower floor catches fire, out of nowhere. The next
+day, it happens again. And again the day after. The only strange thing
+anybody noticed was a maid that heard kids laughing in an alleyway,
+right before the fire started.</td>
+</tr>
+<tr class="odd">
+<td>03</td>
+<td>A room in the lower flood EXPLODES in a geyser, that sends foul,
+brown, swampy water everywhere. Something crawls in it and it attacks
+people.</td>
+</tr>
+<tr class="even">
+<td>04</td>
+<td>A drunk dragon crashes through a window.</td>
+</tr>
+<tr class="odd">
+<td>05</td>
+<td>A knight completely dressed in black, on a black horse, rides up to
+the door, demanding a duel. If defeated, the next day, a white knight
+arrives, demanding a duel. The thing keeps repeating, no matter how many
+times they’re defeated or killed.</td>
+</tr>
+<tr class="even">
+<td>06</td>
+<td>A knight completely dressed in black, on a black horse, rides up to
+the door, demanding a duel. It’s actually an empty suit of armour being
+moved by invisible fairies, looking to mess with the players. They’ll
+use tricks and illusion to make their opponent look ridicolous in front
+of their followers.</td>
+</tr>
+<tr class="odd">
+<td>07</td>
+<td>The stronghold starts sinking. Apparently it was built on top of a
+swamp.</td>
+</tr>
+<tr class="even">
+<td>08</td>
+<td>The Stronghold starts floating. Apparently it was built in an area
+where gravity is magically weak.</td>
+</tr>
+<tr class="odd">
+<td>09</td>
+<td>Trees start growing around the stronghold at incredible speed. In
+just a day they start growing inside and breaking through walls and
+floors. Strange naked people have been sighted in the new forest.</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>A second stronghold appears in front of the first. It’s a mirror of
+it, but it’s all wrong, a bit crooked, a bit different, pieces out of
+place here and there. Warped copies of the players roam its wrong
+halls.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="inside-hooks">Inside hooks</h2>
+<p>Your own people are involved. Peasants and followers did something
+you have to deal with.</p>
+<table>
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 98%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01</td>
+<td>Witch hunters arrive early in the morning and drag away one of your
+maids. She’s a witch, they say. Someone gave them a tip, they won’t say
+who, but someone in the stronghold. The locals itch for a good burning,
+in any case.</td>
+</tr>
+<tr class="even">
+<td>02</td>
+<td>Half a dozen witch hunters are found dead inside the castle. Seems
+like they wanted to arrest someone. Rumours go around rapidly, and
+everybody is nervous. Accusations are thrown around.</td>
+</tr>
+<tr class="odd">
+<td>03</td>
+<td>An NPC friend with the players arrives in town with a big haul. He
+scammed some wealthy merchants to get it. They didn’t appreciate it and
+caught up before he could get away. He asks the players to hide him and
+his “technically not stolen” wares in their stronghold. Legally, he
+didn’t quite break the law, so…</td>
+</tr>
+<tr class="even">
+<td>04</td>
+<td>One of the servants is caught with a bunch of stolen stuff in their
+room. Dozens of items, most of them worthless. A prank? Kleptomania? How
+will the players punish the thief?</td>
+</tr>
+<tr class="odd">
+<td>05</td>
+<td>Magical items start disappearing from the players' inventory when
+they’re in the stronghold, and they are found inside the room of one of
+the servants. A big haul. “I’m being framed!” says the servant.</td>
+</tr>
+<tr class="even">
+<td>06</td>
+<td>A servants is cursed by a witch and suffers a horrible mutation that
+can’t be easily removed. The local clerics want them burned, the
+peasant, horrified, want them exiled. Will the players help the poor guy
+instead? A lot of people will be really unhappy if the mutant stays
+around, but he did nothing wrong.</td>
+</tr>
+<tr class="odd">
+<td>07</td>
+<td>A servant is cursed by a witch. Everybody knows the servant deserved
+it, they were an asshole, unpleasant and downright violent. But they’re
+still a servant of the players. To insult them is to insult the players.
+Letting this go without punishing the witch will surely damage their
+reputation, and make people question their loyalty:" What good is
+serving them if they won’t even protect me?"</td>
+</tr>
+<tr class="even">
+<td>08</td>
+<td>A servant is caught embezzling money from the stronghold treasury.
+They were being forced to do it, they say; blackmail!</td>
+</tr>
+<tr class="odd">
+<td>09</td>
+<td>A group of servants is caught organising orgies in the depths of the
+stronghold.</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Some random traveller was robbed and murdered just next to the
+stronghold. A servant probably did it, many seem to know about it, but
+nobody wants to talk. What for? The victim was a nobody, and nobody will
+ever know. Surely you’re not proposing to punish a faithful servant just
+for that? Let it go.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="business-proposals">Business proposals</h2>
+<p>Sometimes being a lord means doing deals. Dangerous deals. Big gains,
+big risks.</p>
+<table>
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 98%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01</td>
+<td>A thief lord approaches the players, proposing a collaboration: They
+want to open a thieves guild hidden in/next to the stronghold. The
+players will get special access to the black market, discounts,
+information and the guarantee they won’t be targets of the guild, in
+exchange for protection and discretion.</td>
+</tr>
+<tr class="even">
+<td>02</td>
+<td>A fervent cleric proposes to build a chapel in the stronghold,
+together with a bunch of monks. They’re clearly dedicated and will bring
+blessings and protection from the agents of evil. They’re also nuts and
+may start witch hunts and oppress the locals. Refusing will bring their
+hammer, and, they say, the anger of the gods.</td>
+</tr>
+<tr class="odd">
+<td>03</td>
+<td>A strange alchemist proposes to build a lab in the stronghold. The
+alchemist is talented, no doubt, and they offer the players some really
+neat potions. They’re also a bit unstable, and their experiments often
+get right on the verge of going out of control. No problem, the
+alchemist guarantees. All cool. Just don’t ask about the previous
+laboratory.</td>
+</tr>
+<tr class="even">
+<td>04</td>
+<td>A druid tells the players they must let a sacred groove grow next to
+the stronghold. If they refuse they are an enemy of nature, like all
+other nobles.</td>
+</tr>
+<tr class="odd">
+<td>05</td>
+<td>A merchant proposes to build a menagerie. Accepting would bring the
+players money and useful companions, but the merchant handles the
+animals with awful and violent methods. Still, technically it’s not
+illegal, and if the players find out only after the menagerie has been
+built, it won’t be easy to remove it without paying a hefty fine and
+causing a scandal. Not legally, at least.</td>
+</tr>
+<tr class="even">
+<td>06</td>
+<td>A famous artist proposes to build a theatre in the area. They are a
+real handful: annoying, pretentious and overbearing, but aren’t all
+great artists? Their talent is clear, the populace loves them and nobles
+love to be seen by others at their spectacles.</td>
+</tr>
+<tr class="odd">
+<td>07</td>
+<td>An unknown bard proposes to build a small theatre, something simple,
+to make the peasants happy and entertain the kids. All very humble. Too
+humble, other nobles will surely dislike something like this. What a
+preposterous idea.</td>
+</tr>
+<tr class="even">
+<td>08</td>
+<td>Someone proposes to legalise prostitution and open a brothel in
+town.</td>
+</tr>
+<tr class="odd">
+<td>09</td>
+<td>A group of dwarves proposes to build a large foundry in the
+stronghold. They’ll produce and sell weapons to the entire kingdom. Just
+imagine how much money you’ll make, selling weapons. Mountains of gold.
+Gold. Gold. Ethics? Eh, whatever. Think of the gold.</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>The peasants beg the players to stop with the building and fixing:
+they are tired, the season is hard, food is scarce. The players can
+refuse an important upgrade/addition to the stronghold to make the
+peasants happy, but damage their reputation with other nobles, or work
+their peasants to the bone and gain a reputation as brutal
+dictators.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="scary-plot-hooks">Scary plot hooks</h2>
+<p>Spooky Scary Skeletons and other shivers in the night</p>
+<table>
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 97%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01</td>
+<td>At night, the peasants are kept awake by the sound of hands
+scratching and clawing coming from inside the walls and under the floor.
+Some, terrified, started sleeping in the middle of the street.</td>
+</tr>
+<tr class="even">
+<td>02</td>
+<td>At night, a shadowy knight runs around the village, hidden by the
+fog. Nobody knows exactly what it is, but it causes damages and gives
+everybody a good scare.</td>
+</tr>
+<tr class="odd">
+<td>03</td>
+<td>At night, a voice crying and begging from help can be heard from the
+well in the middle of the stronghold. Nobody recognises the voice.</td>
+</tr>
+<tr class="even">
+<td>04</td>
+<td>At night, entire fields wither and die. The plants are found
+completely black and dead in the morning, but no traces. It hits a
+different farm every night.</td>
+</tr>
+<tr class="odd">
+<td>05</td>
+<td>At night, one more moon than usual can be seen in the sky. But only
+from the stronghold.</td>
+</tr>
+<tr class="even">
+<td>06</td>
+<td>At night, a massive swarm of insects covers the sky and lands on the
+village. They enter in every house, eating everything that can be eaten.
+They eat crops and animals too.</td>
+</tr>
+<tr class="odd">
+<td>07</td>
+<td>At night, people are brutally murdered in the middle of the village.
+A good, old fashioned murder mystery.</td>
+</tr>
+<tr class="even">
+<td>08</td>
+<td>At night, somebody dug up all the bodies from the local graveyard
+and made a pile with them in the middle of the village.</td>
+</tr>
+<tr class="odd">
+<td>09</td>
+<td>In the evening, as the sun is setting, strange figures can be seen
+walking between the crops. Some farmers go towards them, to see who they
+are, and never come back.</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>At dawn, some peasants wake up covered in blood.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="drastic-events">Drastic events</h2>
+<p>Events that could radically change life at the stronghold.</p>
+<table>
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 98%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01</td>
+<td>A necromancer arrives at the stronghold and offers to put her
+undeads to good use, helping the players. They can be a great workforce:
+never tired, never sleeping or eating. Would make life for the peasants
+a lot easier.</td>
+</tr>
+<tr class="even">
+<td>02</td>
+<td>A strange plant starts growing in the village. Eating it makes
+people hallucinate. The peasants love it, and they look happier and more
+relaxed. What will be, if any, the long term effects, nobody knows.</td>
+</tr>
+<tr class="odd">
+<td>03</td>
+<td>A drow enclave asks to move into town, or under it, to be more
+precise. They say they abandoned the cult of Lolth, and want to live a
+better life.</td>
+</tr>
+<tr class="even">
+<td>04</td>
+<td>Horrors and monsters start crawling in the woods around the
+stronghold, their numbers growing every day. Will the players delve into
+the forest, trying to find the source, leaving their settlement
+undefended? Or will they wall themselves in and hope to endure the
+onslaught?</td>
+</tr>
+<tr class="odd">
+<td>05</td>
+<td>A horde of goblinoid arrives and says they want peace. They want to
+move in and work, peacefully, together with the players. They have shown
+they are powerful and capable. An alliance would have a lot of benefits,
+but other nobles and local farmers would both be hard to convince.</td>
+</tr>
+<tr class="even">
+<td>06</td>
+<td>The king demands the players send a large number of their followers
+and peasants to help in the war effort. Most of them will never come
+back, but it’s their duty, as nobles, to do so.</td>
+</tr>
+<tr class="odd">
+<td>07</td>
+<td>A strange idea is going around the locals: they think the players
+are about to declare their independence, break off from the kingdom.
+Sure, they wouldn’t have to pay any more taxes, there is potentially
+much to gain, but the backlash would be enormous. The players can squash
+these rumours, hopefully before they reach the ears of the king. Unless
+they want to consider the idea…</td>
+</tr>
+<tr class="even">
+<td>08</td>
+<td>There is a strong independence sentiment growing between the locals.
+They don’t want to follow the players anymore, and a few rebels seem
+really good at riling up the crowd. The players can squash the movement
+with violence, try to gain back their trust, or hey, maybe they will
+accept and leave.</td>
+</tr>
+<tr class="odd">
+<td>09</td>
+<td>A connection to an elemental plane opens in the middle of the
+stronghold. The players can keep it, and make an alliance with whatever
+is on the other side. Their followers and peasants will become a mix of
+regular mortals, planar-touched mortals and extraplanar visitors. Or
+they can try to close it.</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>A Hobgoblin legion wants to work for the players. They are well
+organised, trained and armed to the teeth.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="retainers">Retainers</h2>
+<p>Hooks involving your most important followers. Remember that they’re
+people, with their own lives and interests.</p>
+<table>
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 98%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01</td>
+<td>A retainer killed a commoner over a stupid discussion. The retainer
+is shocked and feels terrible. They ask to be exiled, they’ve been
+feeling confused for a while… all this power is getting to their head.
+They want to just stop and live like a normal person, away from
+everything. The retainer will be lost permanently.</td>
+</tr>
+<tr class="even">
+<td>02</td>
+<td>A retainer killed a commoner over a stupid discussion. The retainer
+expects the players will take their side. After all, it was just one,
+dirty commoner. Or so the retainer says. That would surely sour
+relationships with the locals.</td>
+</tr>
+<tr class="odd">
+<td>03</td>
+<td>A retainer gets in a fight with a visiting noble. If things
+escalate, it could become a formal duel to the death. That would be…
+really bad, for the players, whatever the result will be.</td>
+</tr>
+<tr class="even">
+<td>04</td>
+<td>A retainer gets in a discussion with a visiting noble. The Noble
+pulls out a knife and wounds the retainer, in front of everybody.
+Scandalous.</td>
+</tr>
+<tr class="odd">
+<td>05</td>
+<td>A retainer is found in bed with a peasant. She’s pregnant, but the
+retailer doesn’t want anything to do with her. Her family is outraged
+but could settle for a hefty payment, to keep everything under wraps.
+Still, small town, rumours spread.</td>
+</tr>
+<tr class="even">
+<td>06</td>
+<td>A retainer is found in bed with a princess! If this becomes public
+knowledge, it will be an enormous scandal. And the princess is
+pregnant.</td>
+</tr>
+<tr class="odd">
+<td>07</td>
+<td>A retainer is found in bed with a peasant. The retainer is in love
+and asks to be let go from their job so the two can get married and go
+live together.</td>
+</tr>
+<tr class="even">
+<td>08</td>
+<td>A retainer is a vampire! They’re trying to keep it secret, but the
+voices of people being assaulted in the night spread rapidly.</td>
+</tr>
+<tr class="odd">
+<td>09</td>
+<td>A retainer was attacked by an intellect devourer. Their intellect
+was devoured, and they have been replaced. A simple scout? The harbinger
+of a Mind Flayer invasion? Will the PCs even realise it happened?</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>A retainer meets a dryad in the woods around the stronghold, falls
+in love and asks to be let go, so they can go live together, frolicking
+in the woods or whatever. If the players refuse, the retainer runs
+away.</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>A retainer believes the players are being cheap. They demand to be
+given better equipment and more magical items.</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>A retainer bought a pegasus from a shady merchant, to use as a
+mount. The unicorn is wearing a magical bit that makes it follow any
+order.</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>A group of retainers have been helping the local peasants with some
+monsters. Nothing serious, very easy job, but the retainers are taking a
+lot of money from the peasants, to do it.</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>Fight between retainers. It’s something petty, but both retainers
+are getting riled up, and both expect the support of the players.</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>A retainer becomes a warlock. They met an entity and made a pact, in
+their free time. The players realise that this new patron is considered
+more important than they are, by the newly minted warlock.</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>A retainer was out in the woods, hunting. The retainer saw something
+move and shot. That something was an elf, and they’re dead now. The
+retainer arrives at the stronghold in the middle of the night, carrying
+the body, desperately asking to hide it before the other elves find out
+and come for the retainer head. It’s possible they already know.</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>A rival noble starts buying the players retainers, offering them a
+lot of gold, more than the players can afford.</td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>A retainer is often drunk, even during adventures, and their
+performance is terrible.</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>A retainer is spying on the players, selling information to some
+rival noble or criminal group. The player can catch them during the
+exchange at night, hidden in the garden.</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>A retainer has committed a blasphemous act and was marked by a god.
+Locals are horrified and hide as soon as they see the retainer. Other
+retainers expects the players to do something about it.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="political-hooks">Political hooks</h2>
+<p>If you want to game those thrones. Not every player will like
+these.</p>
+<table>
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 98%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01</td>
+<td>Taxes. A retainer proposes to raise them, the peasants ask to lower
+them. The retainer says the players can use them wisely, and in the end,
+the peasants would be richer than without taxes. The retainer could be
+embezzling part of those taxes.</td>
+</tr>
+<tr class="even">
+<td>02</td>
+<td>A peasant insulted one of the players. The law says that a peasant
+insulting a noble should be punished harshly, and nearby nobles will
+expect nothing less. If the players find it excessive and refuse, their
+reputation will surely be tarnished.</td>
+</tr>
+<tr class="odd">
+<td>03</td>
+<td>A peasant stole from the players. They were hungry and desperate,
+but the law is clear: off with their head. A peasant stealing from a
+noble is unforgivable. Forgiving the crime would be downright
+scandalous.</td>
+</tr>
+<tr class="even">
+<td>04</td>
+<td>A retired professor has a proposal: open a school for the local
+peasants. Teach them the basics, at least reading and some maths and
+history. Sounds nice, right? WRONG! Other nobles find the idea absurd,
+and will not tolerate something like that. It’s a mockery of everything
+their society is based on, an attack at their status. Even the king is
+getting involved. The players will get in real troubles if they go
+through with this idea.</td>
+</tr>
+<tr class="odd">
+<td>05</td>
+<td>A group of [race discriminated against in your setting] arrives at
+the stronghold, dirty and hungry, begging for refuge. Everybody expects
+the players to simply kick them out. Not to mention, what will we do if
+more arrive?</td>
+</tr>
+<tr class="even">
+<td>06</td>
+<td>An important noble wants to visit the stronghold. He demands to be
+welcomed the way he deserves: massive celebrations, plenty of food,
+games, music. The celebration alone will keep the players busy for days,
+not to mention the time it will take to prepare it, and the enormous
+waste of resources, food, and the time it will take from the peasants
+that could have other things to do. Refusing, while tempting, would
+carry heavy repercussions and the anger of the noble.</td>
+</tr>
+<tr class="odd">
+<td>07</td>
+<td>A marriage proposal for a player. A noble family wants to organise a
+marriage.</td>
+</tr>
+<tr class="even">
+<td>08</td>
+<td>A high-level bard arrives in town and starts mocking the players.
+Legally, there isn’t much they can do to stop them, but the bard often
+goes past simple humour, and seems to be actively harming their
+reputation. Maybe the bard secretly works for somebody?</td>
+</tr>
+<tr class="odd">
+<td>09</td>
+<td>A group of mercenaries wants to move in, offering to help protect
+the land. They are talented, and they would surely make the nearby lands
+safer, and their price is fair. They’re also aggressive, loud and
+violent with the peasants.</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>A druid wants to build a temple to an ancient, primeval deity, that
+almost everybody has forgotten. It’s not an evil deity, but its cult is
+forbidden in the kingdom, for reasons nobody remembers. The temple would
+surely bring boons and blessings, but also the ire of the king.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="superstition-and-tradition">Superstition and tradition</h2>
+<p>Plot hooks that involve regular people and their wacky ideas about
+the world.</p>
+<table>
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 98%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01</td>
+<td>A wounded unicorn arrives in front of the stronghold and collapses,
+still alive, but barely. The local peasants are ready to butcher it:
+everybody knows unicorns can heal people, give youth, and are also very
+valuable. The players can stop them, but it will surely get a lot of
+folks grumbling.</td>
+</tr>
+<tr class="even">
+<td>02</td>
+<td>A large humanoid (any unconventional race) has wandered near the
+stronghold. The locals attacked them, tied them up, and are ready to
+burn them in the public square, even if the humanoid didn’t hurt
+anybody.</td>
+</tr>
+<tr class="odd">
+<td>03</td>
+<td>Centaurs have been spotted in the woods nearby. The locals are
+terrified, they’re putting up barricades and want to set the woods on
+fire. There are local tales that depict centaurs as demons.</td>
+</tr>
+<tr class="even">
+<td>04</td>
+<td>A wounded Humber Hulk wandered outside the Underdark and died in
+front of the Stronghold. The locals want to eat it. Technically, the law
+grants them the right to do so, and they are convinced it’s some magical
+creature that will give them a health boost.</td>
+</tr>
+<tr class="odd">
+<td>05</td>
+<td>A wolf was spotted inside the stronghold at night. The locals are
+convinced it was a werewolf, paranoia is growing and people accuse each
+other.</td>
+</tr>
+<tr class="even">
+<td>06</td>
+<td>One of the players accidentally broke an old local law. The
+punishment would be having their hands cut. The locals take these things
+very seriously.</td>
+</tr>
+<tr class="odd">
+<td>07</td>
+<td>The locals are convinced a nearby pond is magical and will protect
+the village during a famine if you dump carts full of food in it.
+Throwing away tons of food during a famine seems like a bad idea, but
+the locals are adamant it’s the only way, and it worked in the
+past.</td>
+</tr>
+<tr class="even">
+<td>08</td>
+<td>There is an inn in town, and occasionally, a traveller disappears.
+It’s the spirits, say the locals: they spirit people away, no big deal.
+Been happening for years. Don’t look into it, and don’t investigate the
+inn.</td>
+</tr>
+<tr class="odd">
+<td>09</td>
+<td>Locals regularly bring offerings to the “guardian” of the village. A
+spirit that watches over them, they say. If the players check it out,
+they easily recognize it as a dangerous Chimera.</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>There is an eclipse. The locals are ready to kill all the babies
+born this day. Put the players in the spotlight. Roleplay-heavy hooks
+that directly involve the characters.</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>A peasant is in love with one of the players, and start courting
+them.</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>A drunk peasant, angry over something trivial, throws a glass of
+wine in the face of a player, in front of everybody.</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>Seeing the wealth of the players, the peasants accuse them of being
+thieves, of taking advantage of them and their land without
+sharing.</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>A rumour that the players are Satanists is spreading around the
+stronghold. Apparently the high-level magic they use is making their
+followers nervous.</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>A writer wants to write a book about one of the players, a glorious
+ballad of their deeds. They ask to be allowed to follow them, in their
+adventures and also during their daily life.</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>Worrisome rumours about a player reached the ears of the
+inquisition. They demand an investigation: one of them will follow the
+player, in their adventure and also during their daily life, judging
+their actions. No secret shall be kept from the inquisitor.</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>A local woman is pregnant, one of the players is accused of being
+the father.</td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>A kid arrives at the stronghold, dirty and covered in rags. All they
+have is a letter that says one of the players is their parent and must
+take care of the kid.</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>A rival of the players, encountered in a previous adventure, attacks
+the village and takes some peasants and some followers hostage.</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>The players go back to their stronghold after an adventure and find
+out they are already there: there are identical copies of their
+characters running the stronghold. All the peasants and followers
+thought they were the real ones. Both groups accuse the others of being
+impostors.</td>
+</tr>
+</tbody>
+</table>
+<p><a
+href="https://www.reddit.com/r/DnDBehindTheScreen/comments/iiuco5/100_plot_hooks_for_your_stronghold_adventures_and/">Source</a></p>
+</body>
+</html>

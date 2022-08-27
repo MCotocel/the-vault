@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.40 - The megadungeon</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<h1 id="the-megadungeon">The megadungeon</h1>
+<h2 id="megadungeon-as-a-style-of-play">Megadungeon as a style of
+play</h2>
+<ul>
+<li>In Dark Souls, you measure your progress in several things - areas
+cleared, bonfires lit, and bosses defeated. In Megadungeons, you measure
+your progress in rooms cleared.</li>
+<li>Dark Souls uses the idea of a room as a metaphorical thing. A room
+is any place where a thing is located. Firelink Shrine and the NPCs are
+a room. The cemetery below is a room with the skeletons which do not
+stay down. Keeping it simple like this can make designing a Megadungeon
+much easier.</li>
+<li>Dark Souls tells story through this process - each region has a tale
+told by the order of its rooms, and the encounters in those rooms. While
+designing your own megadungeon, think in these terms. How can the rooms
+and the encounters tell a story?</li>
+<li>In this way, Megadungeon is a style of play, rather than a location.
+It's a style of play that focuses on the ROOM and the ENCOUNTER and how
+those are linked together to tell a story.</li>
+<li>Continuing the war example: the battlefield region could have 1.)
+foxholes filled with terrified soldiers, 2.) a trench with wounded men
+clogging the route, 3.) front lines with constant machine gun fire and
+an incompetent commander, 4.) no man's land, with enemies charging with
+bayonets. This tells a story of the region, and the players that move
+through it will forward the story of the Party.</li>
+</ul>
+<h2 id="the-beauty-of-the-5e-adventure-day">The Beauty of the 5e
+Adventure Day</h2>
+<ul>
+<li>Dark Souls is a game of attrition. Resources are your only way of
+survival. Health, Stamina, estus, spells, etc. This. Is. D&amp;D.</li>
+<li>In 5e, health, HD, spells, potions, etc. are the resources you need
+to continue adventuring.</li>
+<li>In Dark Souls, reaching a bonfire is a goal because it means rest
+and replenishing resources. In 5e, this is the adventure day.</li>
+<li>The adventure day - typically - says that a party can handle 5-8
+encounters from easy-hard difficulty before needing a long rest. During
+this day you can have short rests to expend HD and replenish certain
+abilities.</li>
+<li>You can use this in your Megadungeon game to create story. Nothing
+is more exciting and tension driven in Dark Souls than when you're
+running low on everything and having to decide whether you are going
+back or moving forward in hopes of a bonfire.</li>
+<li>Take this example and place safe spots (bonfires) in your
+Megadungeon. Place them at the end of Adventuring days.</li>
+</ul>
+<h3 id="example">Example</h3>
+<ul>
+<li>Taking a look at Dark Souls as an example of excellent design - From
+Firelink Shrine to the first bonfire, there are 5 necessary encounters:
+the undead on the stairs, the undead playing dead, the undead where the
+dragon lands, the crossbow undead, and the undead with the shields and
+spears. Each one takes place in its own "room", with the crossbow-men
+being able to fire down on you while taking on another encounter.</li>
+<li>Not only this but there are 3 optional rooms for extra XP and
+treasure - the rat in the sewer guarding the humanity, the secret jump
+to get the treasure in the building, and the hidden NPC downstairs which
+sells stuff.</li>
+<li>That's the perfect example of how to design an adventure day. In
+D&amp;D that entire thing might take a session, maybe two, depending.
+And when you start looking at Dark Souls like that, you can see that all
+areas are the same. And they USE the Adventure Day to build tension.
+Sometimes making them shorter, and sometimes forcing you to go 14-15
+encounters before reaching the next one.</li>
+</ul>
+<h2 id="adventure-day-continued">Adventure Day Continued</h2>
+<ul>
+<li>When designing your regions for your Megadungeon, use the idea of
+the adventure day to add another layer to the story. The layer which
+taxes the players resource management. With this, you have both layer of
+the game engaged - the characters and their buy-in, and the players with
+their character sheets.</li>
+<li>Continuing the war example: after crossing no-man's land, the
+opposing force is pushed back and the Party can finally rest before
+being awoken by artillery the next day.</li>
+</ul>
+<h2 id="the-importance-of-npcs">The importance of NPCs</h2>
+<ul>
+<li>Dark Souls uses NPCs for very few reasons - covenants,
+buying/selling, and optional story. But all of these impact the world of
+Dark Souls, a lonely world where you make it on your own.</li>
+<li>Let this influence your own NPC design. Let the theme of your world
+influence your NPC design.</li>
+<li>Ask yourself what role they fill. Are they here to buy/sell? What
+would a buyer/seller look like in your world?</li>
+<li>In this hypothetical war campaign, a buyer/seller would be the guy
+at the barracks, or a medic on the field, or the guy riding around in
+the jeep with all the bullets.</li>
+<li>The other NPCs, keep their story on an optional level, but don't be
+worried about having NPCs reappear, like when Big Hat Logan shows up
+after being freed.</li>
+<li>Have NPCs disappear, like the Cleric that stands near the back of
+Firelink. If this draws interest, then great, if not, then that's one
+less NPC you have to worry about.</li>
+<li>NPCs as optional stories in the War Campaign could be a soldier that
+joins the squad, a tank sergeant that keeps needing help, a daring spy
+that is offering coin for info, a cartographer that needs help mapping
+the enemy territory. People that can enrich the world, but aren't
+necessary if the party isn't interested.</li>
+</ul>
+<h2 id="locks-keys-and-gates">Locks, Keys, and Gates</h2>
+<ul>
+<li>Dark Souls has <em>some</em> backtracking, to say the least. There
+are doors that can't be opened, paths that shouldn't be travelled,
+creatures which can't be beat. These require you to go do some other
+shit then come back later.</li>
+<li>When designing your regions, don't hesitate to put in rooms that
+need a key. Just like the room, the key can be metaphorical.</li>
+<li>In the War Campaign, a key can be a new rank that gives access to
+new areas/information, it can be a commanding officer that you have to
+get in good with, it can be an injury that puts you in a new location
+for recovery.</li>
+<li>5e has some locked gates built in - certain spells such as Fly allow
+access to the air in a new way. Water breathing potions/spells give you
+access to new locations. Druid wild shapes could give access to animal
+areas previous unallowed. Paladin oaths can give you access to
+locations. Perhaps your wizard school gives access to a certain portion
+of the library others can't go to.</li>
+<li>You can use both 5e's system and your world's theme to build your
+own series of locks/keys/gates and place them around your regions to
+have your own little secrets.</li>
+<li>When someone finally discovers one and unlocks it...it'll make it
+all worth it.</li>
+</ul>
+<p><a
+href="https://www.reddit.com/r/DnDBehindTheScreen/comments/a3okbx/dark_souls_and_the_beauty_of_the_megadungeon/">Source</a></p>
+</body>
+</html>

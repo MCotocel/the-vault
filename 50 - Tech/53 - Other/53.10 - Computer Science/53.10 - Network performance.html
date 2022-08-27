@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>53.10 - Network performance</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="school-tech">school #tech</h1>
+<ul>
+<li>Factors that affect network performance include:
+<ul>
+<li>Number of devices and users, since the bandwidth is shared between
+devices</li>
+<li><a href="53.10%20-%20Transmission%20media.html">53.10 - Transmission
+media</a>, since the media used can result in slower transfer speed</li>
+<li>Interference, since data transmission can be slowed down by
+interference</li>
+<li>Obstacles, such as walls and doors can slow down the data
+transmission</li>
+</ul></li>
+<li>Network speeds help you:
+<ul>
+<li>Decide whether you need to upgrade your hardware</li>
+<li>Estimate how long it will take to download a certain file</li>
+<li>Determine if the performance lives up to the promises made by the
+ISP (internet service provider)</li>
+</ul></li>
+<li>Bandwidth:
+<ul>
+<li>Bandwidth describe the amount of data that can be carried through a
+network connection, usually per second</li>
+<li>More bandwidth means faster data transfer</li>
+<li>A higher bandwidth is desired</li>
+</ul></li>
+<li>Latency:
+<ul>
+<li>Latency describes the time in milliseconds between a bit leaving one
+device, and arriving at another.</li>
+<li>A lower latency is desired</li>
+</ul></li>
+<li>Calculating time to transmit a file:
+<ul>
+<li>Before calculating, it is important to know the difference between
+GB/s and Gb/s
+<ul>
+<li>GB/s means bytes per second</li>
+<li>Gb/s means bits per second</li>
+</ul></li>
+<li>It is also important to know the difference between KB, MB, GB, and
+TB
+<ul>
+<li>KB - 1,000 (thousand) bytes</li>
+<li>MB - 1,000,000 (million) bytes</li>
+<li>GB - 1,000,000,000 (billion) bytes</li>
+<li>TB - 1,000,000,000,000 (trillion) bytes</li>
+</ul></li>
+<li>The formula for calculating the time (in seconds) is <span
+class="math inline">$\frac{size}{speed} = time$</span>
+<ul>
+<li>The size needs to be converted to bits
+<ul>
+<li>This is done by finding the bytes, and multiplying by 8</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</body>
+</html>

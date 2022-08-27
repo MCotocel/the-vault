@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.40 - Why to ban the phrase 'hit points'</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<h1 id="why-to-ban-the-phrase-hit-points">Why to ban the phrase 'hit
+points'</h1>
+<p>Many phrases have found themselves in 5th Edition D&amp;D primarily
+because of tradition, and 'Hit Points' is perhaps the most consistent of
+these. Methods for calculating defences come and go (THAC0, anyone?) but
+Hit Points have remained. Recently, however, as I have been tinkering
+with various things in the combat system of 5e, I have decided to try
+changing the terminology for Hit Points. That's right - I've changed
+next to nothing about the mechanics of Hit Points, just what they are
+called. You may think this is nit-picking and irrelevant - who cares
+what the term is as long as the maths works out? - but I hope today to
+change your mind.</p>
+<p>I would argue that the terms we DMs use to describe mechanical
+elements of a player character, NPC or creature (Hit Points, Sleight of
+Hand, Armour Class, whatever) is the single most important way of
+controlling how your players interact with your fantasy world. Players
+can imagine their characters all they like at home on their sofa, but it
+is the mechanics of the game - and the language of those mechanics -
+which connect them to the game world and gives them legitimacy at our
+tables. So whether those numbers that denote how much your character is
+alive are called 'Hit Points' or something else is, I believe, a key
+issue every DM needs to consider.</p>
+<h2 id="so-whats-wrong-with-hit-points">So what's wrong with Hit
+Points?</h2>
+<p>As most of you know, D&amp;D evolved out of wargames. 'Hit Points' is
+a great phrase to denote the amount of literal 'hits' your army,
+vehicle, ship, or whatever has sustained. A warship can take a number of
+hits from enemy warships, and then it sinks. Perfect. Once we scale this
+to the individual level, though, things get a little weird. Here are a
+few issues I see with it:</p>
+<ul>
+<li>Players being physically hit - a lot. Are your 'Hit Points' as a
+player character the number of times you are actually hit? Does a Level
+10 fighter on 1 Hit Point look like a pin cushion with twenty arrows
+sticking out of him? Obviously that would be ridiculous, so as DMs we
+are often struggling to find other ways to narrative how a player's Hit
+Points could be depleted without them being hit. There is a discrepancy
+between the terminology and what we describe here, which can lead to us
+all having to do some mental gymnastics, which isn't always great for
+immersion.</li>
+<li>Unusual damage types. I also find it strange to consider how
+something like psychic damage can affect one's Hit Points. Are we
+imagining here that the victim is suffering actual brain damage? How
+does that work? They are surely not being 'hit' by anything,
+really.</li>
+<li>Dropping to zero. Because the phrase 'Hit Points' implies physical
+damage more than anything else, it is my belief that this is one of the
+main things which contributes to this 'kill or be killed' mentality,
+where every fight continues until one side or the other are all at zero
+Hit Points, which can only mean death or unconsciousness, rarely
+surrender or flight.</li>
+</ul>
+<p>One easy solution to this is to shrug your shoulders and say, "It's
+always been called Hit Points, I don't really care what it's called,
+I'll just describe things differently so that it makes sense." If that
+is acceptable to you, more power to you. The rest of this post isn't for
+you, sadly - but it is for any other DMs who, like me, find this phrase
+bothersome and don't mind doing a bit of work to change it.</p>
+<p>So what should we replace it with?</p>
+<p>Let me walk you through my thought process on this and you can make
+up your own mind afterwards.</p>
+<p>Firstly, we might look to something like Dark Souls which makes good
+use of 'Stamina'. Stamina still holds that sense of physicality that Hit
+Points does, but it can more easily incorporate 'damage' that occurs
+even when you block, jump out the way, etc. However, it still doesn't
+address our issue with unusual damage types such as psychic, so perhaps
+not the best choice.</p>
+<p>Moving on, we could widen the scope to something more like 'Morale'.
+With morale we can easily narrative why psychic damage hurts you -
+because it damages your 'will to fight' - and we are more likely, when
+hitting zero Morale, to be inclined to describe an enemy surrendering or
+fleeing, which could open up greater roleplay opportunities for your
+players. However, a new issue introduces itself here: how do you deal
+with creatures like undead skeletons controlled by the Lich Lord
+Supreme? Or constructs that only carry out their initial orders? They
+surely have no 'morale' or 'will to fight' that could be damaged. We
+don't want multiple terms for different creatures, so Morale perhaps
+doesn't fit the bill either.</p>
+<p>Finally, then, we come to the term which I am replacing 'Hit Points'
+with in my game: composure.</p>
+<h2 id="composure">Composure</h2>
+<p>Any Sekiro fans will see some inspiration here. I think the best way
+to explain this idea is simply to show you the write up I sent to my
+players about it:</p>
+<ul>
+<li><p>The term 'Hit Points' is replaced with 'Composure'.</p></li>
+<li><p>Composure is a measure of your physical ability and mental
+willpower to continue an activity, be that engaging in battle, climbing
+a mountainside or weathering a heavy storm. Attacks and effects that
+deal damage will subtract this from your total Composure. You calculate
+your total Composure in the same way you would Hit Points, and you can
+gain temporary Composure in the same way you would gain temporary Hit
+Points. Once you reach 0 Composure, you have become too tired to
+continue, either physically, mentally, or a combination of both.
+Depending on the situation, you may fall unconscious or become
+incapacitated in some other way.</p></li>
+</ul>
+<p>You may rightly say that this change seems barely worthy of a BTS
+post (it's only changing a term, after all), but there is honestly such
+a shift in how I, as the DM, and my players interact with the game world
+when we start using this word. Fights become about finding that
+particular element of a creature that the players can use to damage its
+composure, be that the warlord's arrogance, the owlbear's fight/flight
+response, or simply the skeletons physical composition. Games take on a
+naturally more tactical nature, in my experience.</p>
+<p>Once this is in place I also realised it was quite easy to
+re-introduce a mechanic from 4th edition which I was sad to see go in
+5th: the bloodied condition. However, it's not just copied verbatim
+here, but worked into the idea of composure. Here's what I sent my
+players about it:</p>
+<ul>
+<li>If a creature falls below half their total Composure, their
+Composure is considered 'broken'. For player characters this has no
+especial effect, although you as a player may wish to use this
+mechanical element to give flavour to how your character is reacting to
+a given situation; for instance, if the dragon's breath weapon takes
+your Composure below half, you might describe how your will to fight is
+shaken and you are considering fleeing. Other creatures in the game, at
+the DM's discretion, might undergo other effects or changes when their
+Composure is broken; they might lose heart and try to escape, or they
+could launch into a frenzy of fury. Some creatures might even have weak
+points which, if hit, allow you to immediately break their Composure,
+bringing them down to half their total Composure. Breaking Composure is
+therefore an important narrative and mechanical step towards defeating
+your enemies.</li>
+</ul>
+<p>Battles now naturally take on a tense cat-and-mouse game as each side
+attempts to find their opponents weaknesses in order to first of all
+break their composure (perhaps initiating a wide-spread retreat, or
+causing the enemies to fly into a frenzy) and having to then deal with
+the outcome of these (perhaps quite different) enemies. I don't want to
+sound too much like a porn site advertisement, but this one simple trick
+really did change my games completely - and I hope it can change yours,
+too! I hope doctors don't hate me for it!</p>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60.11 - Character creation</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Helvetica, sans;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 8vh 12vw;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    max-width: 100em;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="dnd">dnd</h1>
+<ul>
+<li>A character is a combination of statistics, information, and
+imagination</li>
+<li>All characters must have a race, a class, and ability scores
+<ul>
+<li>Races contribute to identify and have certain mechanical
+benefits</li>
+<li>Classes broadly describe what tactics a character might employ, and
+also gives mechanical benefits</li>
+<li>Ability scores have various uses for throws and character
+statistics</li>
+</ul></li>
+<li>There are 6 ability scores
+<ul>
+<li>Strength:
+<ul>
+<li>This is how easily you can crush a tomato</li>
+<li>It measures athleticism and power</li>
+<li>It is useful for barbarians, fighters, and paladins</li>
+</ul></li>
+<li>Dexterity:
+<ul>
+<li>This is how easily you can dodge a tomato</li>
+<li>It measures agility, reflexes, balance, and poise</li>
+<li>It is useful for monks, rangers, and rogues</li>
+</ul></li>
+<li>Constitution:
+<ul>
+<li>This is how easily you can eat a rotten tomato</li>
+<li>It measures health, stamina, and vitality</li>
+<li>It is useful for everyone</li>
+</ul></li>
+<li>Intelligence:
+<ul>
+<li>This is knowing that a tomato is a fruit</li>
+<li>It measures mental acuity, information recall, and analytical
+skill</li>
+<li>It is useful for wizards</li>
+</ul></li>
+<li>Wisdom:
+<ul>
+<li>This is knowing that a tomato wouldn't work in a fruit salad</li>
+<li>It measures awareness, intuition, and insight</li>
+<li>It is useful for clerics and druids</li>
+</ul></li>
+<li>Charisma:
+<ul>
+<li>This is being able to sell a fruit salad with tomatoes</li>
+<li>It measures confidence, eloquence, and leadership</li>
+<li>It is useful for bards, sorcerers, and warlocks</li>
+</ul></li>
+<li>These ability scores give modifiers, as shown in the table
+below</li>
+</ul></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Score</th>
+<th>Modifier</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>-5</td>
+</tr>
+<tr class="even">
+<td>2-3</td>
+<td>-4</td>
+</tr>
+<tr class="odd">
+<td>4-5</td>
+<td>-3</td>
+</tr>
+<tr class="even">
+<td>6-7</td>
+<td>-2</td>
+</tr>
+<tr class="odd">
+<td>8-9</td>
+<td>-1</td>
+</tr>
+<tr class="even">
+<td>10-11</td>
+<td>+0</td>
+</tr>
+<tr class="odd">
+<td>12-13</td>
+<td>+1</td>
+</tr>
+<tr class="even">
+<td>14-15</td>
+<td>+2</td>
+</tr>
+<tr class="odd">
+<td>16-17</td>
+<td>+3</td>
+</tr>
+<tr class="even">
+<td>18-19</td>
+<td>+4</td>
+</tr>
+<tr class="odd">
+<td>20-21</td>
+<td>+5</td>
+</tr>
+<tr class="even">
+<td>22-23</td>
+<td>+6</td>
+</tr>
+<tr class="odd">
+<td>24-25</td>
+<td>+7</td>
+</tr>
+<tr class="even">
+<td>26-27</td>
+<td>+8</td>
+</tr>
+<tr class="odd">
+<td>28-29</td>
+<td>+9</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>+10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Ability scores can be determined by a standard array or randomly
+with dice
+<ul>
+<li>The standard array is the following:
+<code>15, 14, 13, 12, 10, 8</code></li>
+<li>To roll it randomly, roll a 4d6, pick the top 3 numbers, and note
+down the sum
+<ul>
+<li>Once you've done this 6 times, place the scores where you want
+them</li>
+<li>You are allowed to reroll once</li>
+</ul></li>
+</ul></li>
+<li>A proficiency bonus is a bonus that is added only to checks that you
+are proficient in
+<ul>
+<li>Your class and background gives you some proficiencies</li>
+</ul></li>
+<li>Your class gives you a certain hit die, which sets your initial
+health to the maximum of your hit die plus your constitution modifier
+<ul>
+<li>After resting, you can spend a hit die to recover hit points</li>
+<li>Every time you gain a level, you gain an extra hit die
+<ul>
+<li>Roll the hit die, add your constitution modifier to it, and add the
+total to your hit point maximum</li>
+</ul></li>
+</ul></li>
+<li>Armour class represents how you can avoid damage
+<ul>
+<li>Armour and shields are common ways to raise AC</li>
+<li>Without armour or a shield, your AC is equal to 10 + your dexterity
+modifier</li>
+</ul></li>
+<li>When you use a weapon you are proficient in, you roll a d20 and add
+your proficiency bonus
+<ul>
+<li>A melee attack generally uses your strength modifier, with dexterity
+for finesse weapons</li>
+<li>A ranged attack generally uses your dexterity modifier, with
+strength for thrown weapons</li>
+</ul></li>
+<li>Once you reach a specific XP threshold, you gain a level
+<ul>
+<li>A table with the levels, proficiency bonuses, and points required is
+below</li>
+</ul></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Experience points</th>
+<th>Level</th>
+<th>Proficiency bonus</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+<td>+2</td>
+</tr>
+<tr class="even">
+<td>300</td>
+<td>2</td>
+<td>+2</td>
+</tr>
+<tr class="odd">
+<td>900</td>
+<td>3</td>
+<td>+2</td>
+</tr>
+<tr class="even">
+<td>2,700</td>
+<td>4</td>
+<td>+2</td>
+</tr>
+<tr class="odd">
+<td>6,500</td>
+<td>5</td>
+<td>+3</td>
+</tr>
+<tr class="even">
+<td>14,000</td>
+<td>6</td>
+<td>+3</td>
+</tr>
+<tr class="odd">
+<td>23,000</td>
+<td>7</td>
+<td>+3</td>
+</tr>
+<tr class="even">
+<td>34,000</td>
+<td>8</td>
+<td>+3</td>
+</tr>
+<tr class="odd">
+<td>48,000</td>
+<td>9</td>
+<td>+4</td>
+</tr>
+<tr class="even">
+<td>64,000</td>
+<td>10</td>
+<td>+4</td>
+</tr>
+<tr class="odd">
+<td>85,000</td>
+<td>11</td>
+<td>+4</td>
+</tr>
+<tr class="even">
+<td>100,000</td>
+<td>12</td>
+<td>+4</td>
+</tr>
+<tr class="odd">
+<td>120,000</td>
+<td>13</td>
+<td>+5</td>
+</tr>
+<tr class="even">
+<td>140,000</td>
+<td>14</td>
+<td>+5</td>
+</tr>
+<tr class="odd">
+<td>165,000</td>
+<td>15</td>
+<td>+5</td>
+</tr>
+<tr class="even">
+<td>195,000</td>
+<td>16</td>
+<td>+5</td>
+</tr>
+<tr class="odd">
+<td>225,000</td>
+<td>17</td>
+<td>+6</td>
+</tr>
+<tr class="even">
+<td>265,000</td>
+<td>18</td>
+<td>+6</td>
+</tr>
+<tr class="odd">
+<td>305,000</td>
+<td>19</td>
+<td>+6</td>
+</tr>
+<tr class="even">
+<td>355,000</td>
+<td>20</td>
+<td>+6</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
